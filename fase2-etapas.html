@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OGG IND - Simulador Estratégico Industrial</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Cenário -->
+    <div class="modal fade" id="modalCenario" tabindex="-1" aria-labelledby="modalCenarioLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalCenarioLabel">Cenário - Período 01</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10 text-center">
+                            <h2 class="font-26 color-primary fw-bold">Parâmetros da Rodada</h2>
+                            <p class="font-16">Abaixo apresentamos um resumo das condições iniciais do ambiente onde a sua empresa se encontra, como impostos, taxas e outros detalhes importantes para você e os demais diretores da sua unidade possam tomar as decisões. Análise atentamente as informações abaixo.</p>
+                            <p class="font-12">Atenciosamente<br>OGG Soluções e Consultores Contratados</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card bg-light mb-3">
+                                <div class="card-header text-center">
+                                    <p class="font-16 fw-bold color-primary mb-0"><i class="bi bi-currency-dollar color-primary"></i> Salário base por região</p>
+                                </div>
+                                <div class="card-body bg-light">
+                                    <div class="table-responsive">
+                                        <div class="tableScroll">
+                                            <table class="table">
+                                                <thead>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>Região 1</th>
+                                                        <td>R$ 5670.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Região 2</th>
+                                                        <td>R$ 5670.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Região 3</th>
+                                                        <td>R$ 5670.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Região 4</th>
+                                                        <td>R$ 5670.00</td>
+                                                    </tr>
+                                                </tbody>        
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card bg-light mb-3">
+                                <div class="card-header text-center">
+                                    <p class="font-16 fw-bold color-primary mb-0"><i class="bi bi-star color-primary"></i> Beneficios</p>
+                                </div>
+                                <div class="card-body bg-light">
+                                    <div class="table-responsive">
+                                        <div class="tableScroll">
+                                            <table class="table">
+                                                <thead>
+                                                </thead>
+                                                <tbody class="tableScroll">
+                                                    <tr>
+                                                        <th>ASSISTENCIA ODONTOLOGICA</th>
+                                                        <td>R$ 100.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>AUXILIO ALIMENTACAO</th>
+                                                        <td>R$ 100.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>BOLSA ESCOLA</th>
+                                                        <td>R$ 100.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>CESTA BASICA</th>
+                                                        <td>R$ 100.00</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mapa -->
+    <div class="modal fade" id="modalMapa" tabindex="-1" aria-labelledby="modalMapaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalMapaLabel">Mapa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12 text-center py-5">
+                            <img src="img/regioes.svg" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="modal fade" id="modalFaq" tabindex="-1" aria-labelledby="modalFaqLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalFaqLabel">FAQ</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex align-items-start">
+                        <div class="col-3">
+                            <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                <button class="nav-link text-start active" id="v-pills-inicial-tab" data-bs-toggle="pill" data-bs-target="#v-pills-inicial" type="button" role="tab" aria-controls="v-pills-inicial" aria-selected="true">1. Decisão Inicial</button>
+                                <button class="nav-link text-start" id="v-pills-producao-tab" data-bs-toggle="pill" data-bs-target="#v-pills-producao" type="button" role="tab" aria-controls="v-pills-producao" aria-selected="false">2. Produção</button>
+                                <button class="nav-link text-start" id="v-pills-marketing-tab" data-bs-toggle="pill" data-bs-target="#v-pills-marketing" type="button" role="tab" aria-controls="v-pills-marketing" aria-selected="false">3. Marketing</button>
+                                <button class="nav-link text-start" id="v-pills-pessoas-tab" data-bs-toggle="pill" data-bs-target="#v-pills-pessoas" type="button" role="tab" aria-controls="v-pills-pessoas" aria-selected="false">4. Gestão de Pessoas</button>
+                                <button class="nav-link text-start" id="v-pills-financas-tab" data-bs-toggle="pill" data-bs-target="#v-pills-financas" type="button" role="tab" aria-controls="v-pills-financas" aria-selected="false">5. Finanças</button>
+                                <button class="nav-link text-start" id="v-pills-relatorios-tab" data-bs-toggle="pill" data-bs-target="#v-pills-relatorios" type="button" role="tab" aria-controls="v-pills-relatorios" aria-selected="false">6. Relatórios</button>
+                                <button class="nav-link text-start" id="v-pills-operacionais-tab" data-bs-toggle="pill" data-bs-target="#v-pills-operacionais" type="button" role="tab" aria-controls="v-pills-operacionais" aria-selected="false">7. Operacionais</button>
+                                <button class="nav-link text-start" id="v-pills-dicas-tab" data-bs-toggle="pill" data-bs-target="#v-pills-dicas" type="button" role="tab" aria-controls="v-pills-dicas" aria-selected="false">8. Dicas</button>
+                            </div>
+                        </div>
+                        <div class="col-9">
+                            <div class="tab-content" id="v-pills-tabContent">
+                                <div class="tab-pane fade show active" id="v-pills-inicial" role="tabpanel" aria-labelledby="v-pills-inicial-tab">
+                                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="flush-headingOne">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                    1. Informações do Manual
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="flush-headingTwo">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                    2. O que são as estratégias genéricas?
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="flush-headingThree">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                                    3. Instalação da Fábrica
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-producao" role="tabpanel" aria-labelledby="v-pills-producao-tab">...</div>
+                                <div class="tab-pane fade" id="v-pills-marketing" role="tabpanel" aria-labelledby="v-pills-marketing-tab">...</div>
+                                <div class="tab-pane fade" id="v-pills-pessoas" role="tabpanel" aria-labelledby="v-pills-pessoas-tab">...</div>
+                                <div class="tab-pane fade" id="v-pills-financas" role="tabpanel" aria-labelledby="v-pills-financas-tab">...</div>
+                                <div class="tab-pane fade" id="v-pills-relatorios" role="tabpanel" aria-labelledby="v-pills-relatorios-tab">...</div>
+                                <div class="tab-pane fade" id="v-pills-operacionais" role="tabpanel" aria-labelledby="v-pills-operacionais-tab">...</div>
+                                <div class="tab-pane fade" id="v-pills-dicas" role="tabpanel" aria-labelledby="v-pills-dicas-tab">...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mensagem -->
+    <div class="modal fade" id="modalMensagem" tabindex="-1" aria-labelledby="modalMensagemLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalMensagemLabel">Mensagens</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12">
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Data/Hora</th>
+                                    <th scope="col">Empresa</th>
+                                    <th scope="col">Assunto</th>
+                                    <th scope="col">Ações</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>15/02/2022 - 09:05</td>
+                                        <td>RU01</td>
+                                        <td>Lorem ipsum dolor sit amet, consectetur</td>
+                                        <td>
+                                            <a href="">
+                                                <i class="bi bi-envelope-fill color-primary"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>15/02/2022 - 09:05</td>
+                                        <td>RU01</td>
+                                        <td>Lorem ipsum dolor sit amet, consectetur</td>
+                                        <td>
+                                            <a href="">
+                                                <i class="bi bi-envelope-fill color-primary"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>15/02/2022 - 09:05</td>
+                                        <td>RU01</td>
+                                        <td>Lorem ipsum dolor sit amet, consectetur</td>
+                                        <td>
+                                            <a href="">
+                                                <i class="bi bi-envelope-fill color-primary"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>15/02/2022 - 09:05</td>
+                                        <td>RU01</td>
+                                        <td>Lorem ipsum dolor sit amet, consectetur</td>
+                                        <td>
+                                            <a href="">
+                                                <i class="bi bi-envelope-fill color-primary"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>15/02/2022 - 09:05</td>
+                                        <td>RU01</td>
+                                        <td>Lorem ipsum dolor sit amet, consectetur</td>
+                                        <td>
+                                            <a href="">
+                                                <i class="bi bi-envelope-fill color-primary"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>15/02/2022 - 09:05</td>
+                                        <td>RU01</td>
+                                        <td>Lorem ipsum dolor sit amet, consectetur</td>
+                                        <td>
+                                            <a href="">
+                                                <i class="bi bi-envelope-fill color-primary"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-sm navbar-light">
+          <div class="container">
+            <a class="color-light text-decoration-none font-18 fw-bold" href="painel-geral.html">
+                <img class="me-2" src="img/arrow_left.svg" alt="">
+                Fase 2 - Atividades Empresariais
+            </a>
+            <div class="">
+                <a class="text-light fw-bold text-decoration-none ms-4" data-bs-toggle="modal" href="#modalCenario" role="button">
+                    <i class="bi me-2 color-light bi-controller"></i>
+                    Dados do Mercado
+                </a>
+                <a class="text-light fw-bold text-decoration-none ms-4" data-bs-toggle="modal" href="#modalMapa" role="button">
+                    <i class="bi me-2 color-light bi-geo-alt-fill"></i>
+                    Mapa
+                </a>
+                <a class="text-light fw-bold text-decoration-none ms-4" data-bs-toggle="modal" href="#modalFaq" role="button">
+                    <i class="bi me-2 color-light bi-info-circle"></i>
+                    FAQ
+                </a>
+                <a class="text-light fw-bold text-decoration-none ms-4" data-bs-toggle="modal" href="#modalMensagem" role="button">
+                    <i class="bi bi-envelope color-light"></i>
+                </a>
+            </div>
+      </div>
+    </nav>
+
+    <div class="etapas_topo py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="nav nav-pills nav-justified py-3" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pills-atualidades-tab" data-bs-toggle="pill" data-bs-target="#pills-atualidades" type="button" role="tab" aria-controls="pills-atualidades" aria-selected="true">
+                                <i class="bi bi-newspaper"></i>
+                            </button>
+                            <p class="mb-0 fw-bold pt-2">Atualidades</p>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-producao-tab" data-bs-toggle="pill" data-bs-target="#pills-producao" type="button" role="tab" aria-controls="pills-producao" aria-selected="false">
+                                <i class="bi bi-gear-fill"></i>
+                            </button>
+                            <p class="mb-0 fw-bold pt-2">Produção</p>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-marketing-tab" data-bs-toggle="pill" data-bs-target="#pills-marketing" type="button" role="tab" aria-controls="pills-marketing" aria-selected="false">
+                                <i class="bi bi-chat-dots-fill"></i>
+                            </button>
+                            <p class="mb-0 fw-bold pt-2">Marketing</p>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-gestao-tab" data-bs-toggle="pill" data-bs-target="#pills-gestao" type="button" role="tab" aria-controls="pills-gestao" aria-selected="false">
+                                <i class="bi bi-people-fill"></i>
+                            </button>
+                            <p class="mb-0 fw-bold pt-2">Gestão de Pessoas</p>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-bolsa-tab" data-bs-toggle="pill" data-bs-target="#pills-bolsa" type="button" role="tab" aria-controls="pills-bolsa" aria-selected="false">
+                                <i class="bi bi-graph-up-arrow"></i>
+                            </button>
+                            <p class="mb-0 fw-bold pt-2">Bolsa de Valores</p>
+                        </li>
+                        
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-financeiro-tab" data-bs-toggle="pill" data-bs-target="#pills-financeiro" type="button" role="tab" aria-controls="pills-financeiro" aria-selected="false">
+                                <i class="bi bi-currency-dollar"></i>
+                            </button>
+                            <p class="mb-0 fw-bold pt-2">Financeiro</p>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-previsao-tab" data-bs-toggle="pill" data-bs-target="#pills-previsao" type="button" role="tab" aria-controls="pills-previsao" aria-selected="false">
+                                <i class="bi bi-list-check"></i>
+                            </button>
+                            <p class="mb-0 fw-bold pt-2">Previsão</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-atualidades" role="tabpanel" aria-labelledby="pills-atualidades-tab">
+                            <div class="row d-flex align-items-center justify-content-center border-bottom pb-3 mb-5">
+                                <div class="col-md-5">
+                                    <img src="img/ogg_news.png" alt="">
+                                </div>
+                                <div class="col-md-5 text-end">
+                                    <div class="row d-flex align-items-center justify-content-center">
+                                        <div class="col">
+                                            <strong>Jornalista Responsável</strong> <br>
+                                            Roger Mueller
+                                        </div>
+                                        <div class="col">
+                                            <strong>Tiragem</strong> <br>
+                                            5.800 exemplares
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-md-7">
+                                    <div class="row border-bottom mb-3 pb-2">
+                                        <div class="col-md-4">
+                                            <img class="img-fluid" src="img/imagem-noticia.png" alt="">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <h2 class="color-primary font-30 fw-bold">Edição Especial</h2>
+                                            <p>Até o final da década de 60, o setor florestal era pouco expressivo dentro da economia brasileira, cuja indústria era incipiente e não possuía fontes seguras de abastecimento. Nesse período, o que se verificou foi uma exploração predatória dos recursos florestais. Todavia, com a criação dos incentivos fiscais no final da década de 60, com o objetivo de diminuir a exploração indiscriminada dos recursos florestais naturais e de implantar florestas de rápido crescimento, o setor tomou um novo impulso. O programa de incentivos fiscais proporcionou grandes benefícios sociais, por meio da geração de 700 mil empregos diretos e dois milhões indiretos. O setor florestal, através de suas indústrias, tem contribuído com a sociedade, colocando no mercado materiais imprescindíveis à população, como: celulose, papel, madeira em tora e serrada, chapas, compensados, aglomerados e carvão</p>
+                                        </div>
+                                    </div> 
+                                    <div class="row border-bottom mb-3 pb-2">
+                                        <div class="col-md-4">
+                                            <img class="img-fluid" src="img/imagem-noticia.png" alt="">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <h2 class="color-primary font-30 fw-bold">Edição Especial</h2>
+                                            <p>Até o final da década de 60, o setor florestal era pouco expressivo dentro da economia brasileira, cuja indústria era incipiente e não possuía fontes seguras de abastecimento. Nesse período, o que se verificou foi uma exploração predatória dos recursos florestais. Todavia, com a criação dos incentivos fiscais no final da década de 60, com o objetivo de diminuir a exploração indiscriminada dos recursos florestais naturais e de implantar florestas de rápido crescimento, o setor tomou um novo impulso. O programa de incentivos fiscais proporcionou grandes benefícios sociais, por meio da geração de 700 mil empregos diretos e dois milhões indiretos. O setor florestal, através de suas indústrias, tem contribuído com a sociedade, colocando no mercado materiais imprescindíveis à população, como: celulose, papel, madeira em tora e serrada, chapas, compensados, aglomerados e carvão</p>
+                                        </div>
+                                    </div> 
+                                    <div class="row border-bottom mb-3 pb-2">
+                                        <div class="col-md-4">
+                                            <img class="img-fluid" src="img/imagem-noticia.png" alt="">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <h2 class="color-primary font-30 fw-bold">Edição Especial</h2>
+                                            <p>Até o final da década de 60, o setor florestal era pouco expressivo dentro da economia brasileira, cuja indústria era incipiente e não possuía fontes seguras de abastecimento. Nesse período, o que se verificou foi uma exploração predatória dos recursos florestais. Todavia, com a criação dos incentivos fiscais no final da década de 60, com o objetivo de diminuir a exploração indiscriminada dos recursos florestais naturais e de implantar florestas de rápido crescimento, o setor tomou um novo impulso. O programa de incentivos fiscais proporcionou grandes benefícios sociais, por meio da geração de 700 mil empregos diretos e dois milhões indiretos. O setor florestal, através de suas indústrias, tem contribuído com a sociedade, colocando no mercado materiais imprescindíveis à população, como: celulose, papel, madeira em tora e serrada, chapas, compensados, aglomerados e carvão</p>
+                                        </div>
+                                    </div>  
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card bg-light mb-3">
+                                        <div class="card-header">
+                                            <h2 class="font-16 mb-0 fw-bold color-primary">Condições do Mercado</h2>
+                                        </div>
+                                        <div class="card-body">
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>% de custo de armazenagem</td>
+                                                        <td>12%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>% de custo de armazenagem</td>
+                                                        <td>12%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>% de custo de armazenagem</td>
+                                                        <td>12%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>% de custo de armazenagem</td>
+                                                        <td>12%</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="card bg-light mb-3">
+                                        <div class="card-header">
+                                            <h2 class="font-16 mb-0 fw-bold color-primary">Custo da Pesquisa</h2>
+                                        </div>
+                                        <div class="card-body">
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>% de custo de armazenagem</td>
+                                                        <td>12%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>% de custo de armazenagem</td>
+                                                        <td>12%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>% de custo de armazenagem</td>
+                                                        <td>12%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>% de custo de armazenagem</td>
+                                                        <td>12%</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="card bg-light mb-3">
+                                        <div class="card-header">
+                                            <h2 class="font-16 mb-0 fw-bold color-primary">Custo dos Benefícios</h2>
+                                        </div>
+                                        <div class="card-body">
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>% de custo de armazenagem</td>
+                                                        <td>12%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>% de custo de armazenagem</td>
+                                                        <td>12%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>% de custo de armazenagem</td>
+                                                        <td>12%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>% de custo de armazenagem</td>
+                                                        <td>12%</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            &nbsp;
+                            &nbsp;
+                        </div>
+                        <div class="tab-pane fade" id="pills-producao" role="tabpanel" aria-labelledby="pills-producao-tab">
+                            <h2 class="font-18 fw-bold color-primary">Decisões de Produção</h2>
+                            <div class="card-cenario mb-3">
+                                <div class="row">
+
+                                    <div class="col-md-2">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="img/icons/icon_1.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-2">
+                                                <h2 class="font-14 mb-0 fw-bold">Fabril Importado</h2>
+                                                <p class="mb-0">0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="img/icons/icon_2.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-2">
+                                                <h2 class="font-14 mb-0 fw-bold">Fabril Nacional</h2>
+                                                <p class="mb-0">1</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="img/icons/icon_3.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-2">
+                                                <h2 class="font-14 mb-0 fw-bold">$ Módulo</h2>
+                                                <p class="mb-0">1.300.000,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="img/icons/icon_4.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-2">
+                                                <h2 class="font-14 mb-0 fw-bold">Compra Módulos</h2>
+                                                <p class="mb-0">210.000,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="img/icons/icon_5.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-2">
+                                                <h2 class="font-14 mb-0 fw-bold">Investimento P&D</h2>
+                                                <p class="mb-0">210.000,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="img/icons/icon_6.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-2">
+                                                <h2 class="font-14 mb-0 fw-bold">Venda Módulos</h2>
+                                                <p class="mb-0">0,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <h2 class="font-18 fw-bold color-primary">Produção</h2>
+                            <div class="card-cenario mb-3">
+                                <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="">Contrata Hora Extra?</label> <br>
+                                        <div class="form-check form-check-inline">
+                                            <input checked="" class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                            <label class="form-check-label" for="inlineRadio1">Sim</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                            <label class="form-check-label" for="inlineRadio2">Não</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="">Previsão Produção Total</label>
+                                        <input type="text" class="form-control" value="2.000">
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="">Qtde. de Cotas de P&D</label>
+                                        <div class="form-group">
+                                            <!-- <input type="range" class="form-control-range" id="formControlRange"> -->
+                                            <input type="range" value="80" min="10" max="100" step="1" />
+                                            <input class="resultado" type="text" value="80" size="3" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="">Tipo de Módulo Fabril</label>
+                                        <select name="" id="" class="form-select">
+                                            <option value="">Selecione</option>
+                                            <option value="">Selecione</option>
+                                            <option value="">Selecione</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="">Compra/Venda de Módulos</label>
+                                        <select name="" id="" class="form-select">
+                                            <option value="">Selecione</option>
+                                            <option value="">Selecione</option>
+                                            <option value="">Selecione</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="font-18 fw-bold color-primary">Fornecedores</h2>
+                            <div class="card-cenario mb-3">
+                                <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="">Compra de Matéria Prima</label>
+                                        <input type="text" class="form-control" value="1.500">
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="">Embalagem</label>
+                                        <select name="" id="" class="form-select">
+                                            <option value="">Selecione</option>
+                                            <option value="">Selecione</option>
+                                            <option value="">Selecione</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <table class="table">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th>Tipo de Produto</th>
+                                        <th>Estrutura Plastica</th>
+                                        <th>Motor e Sistema Resfriamento</th>
+                                        <th>Materiais Eletricos</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="align-middle">Fornecedores <i class="bi bi-info-circle"></i></td>
+                                        <td>
+                                            <select name="" id="" class="form-select">
+                                                <option value="">Selecione</option>
+                                                <option value="">Selecione</option>
+                                                <option value="">Selecione</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select name="" id="" class="form-select">
+                                                <option value="">Selecione</option>
+                                                <option value="">Selecione</option>
+                                                <option value="">Selecione</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select name="" id="" class="form-select">
+                                                <option value="">Selecione</option>
+                                                <option value="">Selecione</option>
+                                                <option value="">Selecione</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-middle">Saldo atual</td>
+                                        <td>
+                                            <strong>3.100</strong>
+                                        </td>
+                                        <td>
+                                            <strong>3.100</strong>
+                                        </td>
+                                        <td>
+                                            <strong>3.100</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-middle">Quantidade compra</td>
+                                        <td>
+                                            <input value="2.000" type="text" class="form-control">
+                                        </td>
+                                        <td>
+                                            <input value="2.000" type="text" class="form-control">
+                                        </td>
+                                        <td>
+                                            <input value="2.000" type="text" class="form-control">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+                        </div>
+                        <div class="tab-pane fade" id="pills-marketing" role="tabpanel" aria-labelledby="pills-marketing-tab">
+                           <h2 class="font-18 fw-bold color-primary">Decisões de Marketing</h2>
+
+                            <div class="card-cenario mb-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="img/icons/icon_9.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-2">
+                                                <h2 class="font-14 mb-0 fw-bold">Estoque Anterior P.A</h2>
+                                                <p class="mb-0">537</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="img/icons/icon_8.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-2">
+                                                <h2 class="font-14 mb-0 fw-bold">Qtde Planejada Produção</h2>
+                                                <p class="mb-0">145</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="img/icons/icon_7.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-2">
+                                                <h2 class="font-14 mb-0 fw-bold">Qtde Venda Planejada </h2>
+                                                <p class="mb-0">180</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="img/icons/icon_4.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-2">
+                                                <h2 class="font-14 mb-0 fw-bold">Venda Planejada</h2>
+                                                <p class="mb-0">125</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="img/icons/icon_5.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-2">
+                                                <h2 class="font-14 mb-0 fw-bold">Total Custo Logístico</h2>
+                                                <p class="mb-0">1245</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="font-18 fw-bold color-primary">Vendas por Mercado</h2>
+
+                        </div>
+                        <div class="tab-pane fade" id="pills-gestao" role="tabpanel" aria-labelledby="pills-gestao-tab">
+                            Gestão de Pessoas
+                        </div>
+                        <div class="tab-pane fade" id="pills-bolsa" role="tabpanel" aria-labelledby="pills-bolsa-tab">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Ação</th>
+                                                    <th scope="col">Var. Acum</th>
+                                                    <th scope="col">Var. Per</th>
+                                                    <th scope="col">U.C</th>
+                                                    <th scope="col">Preço Unitário</th>
+                                                    <th scope="col">Saldo Atual</th>
+                                                    <th scope="col">Comprar</th>
+                                                    <th scope="col">Vender</th>
+                                                    <th scope="col">Valor Operação</th>
+                                                    <th scope="col">Saldo em Ações</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th>AAPL - Aracruz PNB</th>
+                                                    <td>4,66</td>
+                                                    <td>0,00</td>
+                                                    <td>0,00</td>
+                                                    <td>0,00</td>
+                                                    <td>0,00</td>
+                                                    <td>
+                                                        <input class="form-control form-control-sm" type="number" value="2" min="0" aria-label="">
+                                                    </td>
+                                                    <td>
+                                                        <input class="form-control form-control-sm" type="number" value="2" min="0" aria-label="">
+                                                    </td>
+                                                    <td>24.680,00</td>
+                                                    <td>0,00</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>AAPL - Aracruz PNB</th>
+                                                    <td>4,66</td>
+                                                    <td>0,00</td>
+                                                    <td>0,00</td>
+                                                    <td>0,00</td>
+                                                    <td>0,00</td>
+                                                    <td>
+                                                        <input class="form-control form-control-sm" type="number" value="2" min="0" aria-label="">
+                                                    </td>
+                                                    <td>
+                                                        <input class="form-control form-control-sm" type="number" value="2" min="0" aria-label="">
+                                                    </td>
+                                                    <td>24.680,00</td>
+                                                    <td>0,00</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>AAPL - Aracruz PNB</th>
+                                                    <td>4,66</td>
+                                                    <td>0,00</td>
+                                                    <td>0,00</td>
+                                                    <td>0,00</td>
+                                                    <td>0,00</td>
+                                                    <td>
+                                                        <input class="form-control form-control-sm" type="number" value="2" min="0" aria-label="">
+                                                    </td>
+                                                    <td>
+                                                        <input class="form-control form-control-sm" type="number" value="2" min="0" aria-label="">
+                                                    </td>
+                                                    <td>24.680,00</td>
+                                                    <td>0,00</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>AAPL - Aracruz PNB</th>
+                                                    <td>4,66</td>
+                                                    <td>0,00</td>
+                                                    <td>0,00</td>
+                                                    <td>0,00</td>
+                                                    <td>0,00</td>
+                                                    <td>
+                                                        <input class="form-control form-control-sm" type="number" value="2" min="0" aria-label="">
+                                                    </td>
+                                                    <td>
+                                                        <input class="form-control form-control-sm" type="number" value="2" min="0" aria-label="">
+                                                    </td>
+                                                    <td>24.680,00</td>
+                                                    <td>0,00</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>AAPL - Aracruz PNB</th>
+                                                    <td>4,66</td>
+                                                    <td>0,00</td>
+                                                    <td>0,00</td>
+                                                    <td>0,00</td>
+                                                    <td>0,00</td>
+                                                    <td>
+                                                        <input class="form-control form-control-sm" type="number" value="2" min="0" aria-label="">
+                                                    </td>
+                                                    <td>
+                                                        <input class="form-control form-control-sm" type="number" value="2" min="0" aria-label="">
+                                                    </td>
+                                                    <td>24.680,00</td>
+                                                    <td>0,00</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>AAPL - Aracruz PNB</th>
+                                                    <td>4,66</td>
+                                                    <td>0,00</td>
+                                                    <td>0,00</td>
+                                                    <td>0,00</td>
+                                                    <td>0,00</td>
+                                                    <td>
+                                                        <input class="form-control form-control-sm" type="number" value="2" min="0" aria-label="">
+                                                    </td>
+                                                    <td>
+                                                        <input class="form-control form-control-sm" type="number" value="2" min="0" aria-label="">
+                                                    </td>
+                                                    <td>24.680,00</td>
+                                                    <td>0,00</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-financeiro" role="tabpanel" aria-labelledby="pills-financeiro-tab">
+                            Financeiro
+                        </div>
+                        <div class="tab-pane fade" id="pills-previsao" role="tabpanel" aria-labelledby="pills-previsao-tab">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="card bg-light mb-3">
+                                        <div class="card-header text-center">
+                                            <p class="font-16 fw-bold color-primary mb-0"><i class="bi bi-bar-chart-fill color-primary"></i> DRE Previsto</p>
+                                        </div>
+                                        <div class="card-body bg-light">
+                                            <div class="table-responsive">
+                                                <div class="tableScroll">
+                                                    <table class="table">
+                                                        <thead>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>Receita de Vendas</th>
+                                                                <td>R$ 5670.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>(-) Custo dos Produtos Vendidos</th>
+                                                                <td>R$ 5670.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Lucro / Prejuízo Bruto</th>
+                                                                <td>R$ 5670.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Investimento em Marketing</th>
+                                                                <td>R$ 5670.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Despesas Totais</th>
+                                                                <td>R$ 5670.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Qtde.Módulos Fabris dos Concorrentes</th>
+                                                                <td>R$ 5670.00</td>
+                                                            </tr>
+                                                        </tbody>        
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="card bg-light mb-3">
+                                        <div class="card-header text-center">
+                                            <p class="font-16 fw-bold color-primary mb-0"><i class="bi bi-pie-chart-fill color-primary"></i> Fluxo de Caixa Previsto</p>
+                                        </div>
+                                        <div class="card-body bg-light">
+                                            <div class="table-responsive">
+                                                <div class="tableScroll">
+                                                    <table class="table">
+                                                        <thead>
+                                                        </thead>
+                                                        <tbody class="tableScroll">
+                                                            <tr>
+                                                                <th>Participação de Mercado na Rodada</th>
+                                                                <td>R$ 100.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Salários Pagos pelos concorrentes</th>
+                                                                <td>R$ 100.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Preço de Venda da Concorrência</th>
+                                                                <td>R$ 100.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Investimento em Marketing</th>
+                                                                <td>R$ 100.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Investimento em P & D</th>
+                                                                <td>R$ 100.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Qtde.Módulos Fabris dos Concorrentes</th>
+                                                                <td>R$ 100.00</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="acoes">
+                        <div class="botoes">
+                            <a href="painel-aluno.html" class="btn btn-voltar">Cancelar</a>
+                            <!-- <a href="painel-aluno.html" class="btn btn-primary disabled">Próximo <i class="bi bi-arrow-right"></i></a> -->
+                            <a href="painel-geral2.html" class="btn btn-primary">Salvar <!-- <i class="bi bi-arrow-right"></i> --></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer fixed-bottom">
+        <div class="container-fluid">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="col-12 col-lg-6">
+                    <div class="d-flex flex-column flex-lg-row align-items-center">
+                        <div class="flex-shrink-0">
+                            <img src="img/logo-rodape.svg" alt="" class="img-fluid">
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <p class="font-14 mb-0">2018050-MANAGEMENT / RU01-01</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <p class="font-14 text-center text-lg-end mb-0">Direitos reservados a OGG Simulador © 2022 </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

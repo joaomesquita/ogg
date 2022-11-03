@@ -1,56 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Lato', sans-serif;
-    color: #5E5E5E;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+* {margin: 0;padding: 0;font-family: 'Lato', sans-serif;color: #5E5E5E;}
 body {background-color: #F4F4F4;}
-
 .bg-primary {background-color: #121F49 !important;}
 .bg-secondary {background-color: #EF780D;}
-
+.bg-light {background-color: #fff !important;}
 .color-primary {color: #121F49;}
 .color-secondary {color: #EF780D;}
+.color-tertiary {color: #9FA2B4;}
 .color-light {color: #fff;}
 
+.color-s{color: #FFC801;}
+.color-w{color: #8DC330;}
+.color-o{color: #B2000C;}
+.color-t{color: #0059AB;}
+
+.font-40 {font-size: 40px;}
 .font-30 {font-size: 30px;}
+.font-26 {font-size: 26px;}
 .font-20 {font-size: 20px;}
 .font-18 {font-size: 18px;}
+.font-16 {font-size: 16px;}
 .font-14 {font-size: 14px;}
+.font-13 {font-size: 13px;}
+.font-12 {font-size: 12px;}
 
-.main {padding: 100px 0;}
-
-.navbar {
-    background-color: #121F49;
-    padding: 15px;
-}
+.main {padding: 50px 0;}
+.navbar {background-color: #121F49;padding: 15px;}
 .navbar a.nav-link {color: #fff !important;}
-
-.footer {
-    border-top: 1px solid #E0E0E0;
-    background-color: #F9F9F9;
-    padding: 12px;
-}
-
 .card-etapa {
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     padding: 15px;
 }
-
 .card-cenario {
     background: #FFFFFF;
     border-radius: 8px;
     padding: 15px;
+    border: 1px solid #C9C9C9;
 }
-
 .btn {
     border-radius: 6px;
-    width: 130px;
+    min-width: 130px;
 }
 .btn .bi {color: #fff;}
 
@@ -62,20 +53,16 @@ body {background-color: #F4F4F4;}
     background-color: #121F49;
     border: 1px solid #121F49;
 }
-
 .disabled  .bi {color: #808080;}
 .btn-primary.disabled {
     background-color: #E2E2E2;
     border: 1px solid #E2E2E2;
     color: #808080;
 }
-
 .btn-voltar {
     border: 1px solid #7C7C7C;
     color: #7C7C7C;
 }
-
-
 .btn-escolha .bi {color: #5E5E5E;}
 .btn-check:checked+.btn-escolha .bi {
     color: #fff;
@@ -90,7 +77,6 @@ body {background-color: #F4F4F4;}
     color: #fff;
     background-color: #EF780D;
 }
-
 .acoes {
     position: fixed;
     bottom: 80px;
@@ -98,14 +84,12 @@ body {background-color: #F4F4F4;}
     width: 100vw;
     padding: 0 80px;
 }
-
 .botoes {
     position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-
 .card-responsaveis {
     display: flex;
     flex-direction: row;
@@ -119,8 +103,186 @@ body {background-color: #F4F4F4;}
 
     margin-bottom: 15px;
 }
-
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #fff;
     background-color: #EF780D;
 }
+.etapas_topo{
+    background: #fff;
+}
+
+label{
+    font-weight: bold;
+}
+
+.navbar a:hover{
+    color: #EF780D;
+}
+.etapas_topo .nav-pills{
+    background: url(../img/line_steps.jpg) repeat-x;
+    background-position: 0 38px;
+}
+.etapas_topo .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    color: #fff;
+    background-color: #EF780D;
+    width: 40px;
+    border-radius: 50%;
+    display: inline-block;
+    font-weight: bold;
+    padding: 8px;
+}
+.etapas_topo .nav-pills .nav-link.active .bi{
+    color: #fff;
+}
+.etapas_topo .nav-pills .nav-link{
+    color: #7C7C7C;
+    background-color: #E1E1E1;
+    width: 40px !important;
+    border-radius: 50%;
+    display: inline-block;
+    font-weight: bold;
+    padding: 8px;
+}
+.btn-outline-primary{
+    color: #EF780D;
+    border-color: #EF780D;
+}
+.btn-outline-primary .bi{
+    color: #EF780D;
+}
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #121F49;
+    border-color: #121F49;
+}
+.login{
+    background: url(../img/login_bg.jpg);
+    background-size: cover;
+}
+.login .row {
+    height: 100vh;
+}
+
+.form-control, .form-select{
+    min-height: 30px;
+}
+
+.footer {
+    border-top: 1px solid #E0E0E0;
+    background-color: #F9F9F9;
+    padding: 12px;
+}
+
+
+.painel-geral .card-cenario{
+    min-height: 160px;
+}
+
+.table .thead-dark th {
+    color: #fff;
+    background-color: #121F49;
+    border-color: #121F49;
+}
+
+.form-check-input:checked {
+    background-color: #EF780D;
+    border-color: #EF780D;
+}
+
+.tableScroll {
+    height: 300px;
+    overflow-y: scroll;
+}
+
+
+input[type="range"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 300px;
+  height: 5px;
+  padding: 0;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  background-color: #EF780D !important;
+}
+
+
+/*Chrome thumb*/
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-border-radius: 5px;
+  /*16x16px adjusted to be same as 14x14px on moz*/
+  height: 16px;
+  width: 16px;
+  border-radius: 5px;
+  background: #e7e7e7;
+  border: 1px solid #c5c5c5;
+}
+
+
+/*Mozilla thumb*/
+
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -moz-border-radius: 5px;
+  height: 14px;
+  width: 14px;
+  border-radius: 5px;
+  background: #e7e7e7;
+  border: 1px solid #c5c5c5;
+}
+
+
+/*IE & Edge input*/
+
+input[type=range]::-ms-track {
+  width: 300px;
+  height: 6px;
+  /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+  background: transparent;
+  /*leave room for the larger thumb to overflow with a transparent border */
+  border-color: transparent;
+  border-width: 2px 0;
+  /*remove default tick marks*/
+  color: transparent;
+}
+
+
+/*IE & Edge thumb*/
+
+input[type=range]::-ms-thumb {
+  height: 14px;
+  width: 14px;
+  border-radius: 5px;
+  background: #e7e7e7;
+  border: 1px solid #c5c5c5;
+}
+
+
+/*IE & Edge left side*/
+
+input[type=range]::-ms-fill-lower {
+  background: #919e4b;
+  border-radius: 2px;
+}
+
+
+/*IE & Edge right side*/
+
+input[type=range]::-ms-fill-upper {
+  background: #c5c5c5;
+  border-radius: 2px;
+}
+
+
+/*IE disable tooltip*/
+
+input[type=range]::-ms-tooltip {
+  display: none;
+}
+
+.resultado {border: none;}
