@@ -7,6 +7,7 @@
     <title>OGG IND - Simulador Estratégico Industrial</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
@@ -710,8 +711,7 @@
                             <p>&nbsp;</p>
                         </div>
                         <div class="tab-pane fade" id="pills-marketing" role="tabpanel" aria-labelledby="pills-marketing-tab">
-                           <h2 class="font-18 fw-bold color-primary">Decisões de Marketing</h2>
-
+                            <h2 class="font-18 fw-bold color-primary">Decisões de Marketing</h2>
                             <div class="card-cenario mb-3">
                                 <div class="row">
                                     <div class="col">
@@ -771,12 +771,495 @@
                                     </div>
                                 </div>
                             </div>
-
                             <h2 class="font-18 fw-bold color-primary">Vendas por Mercado</h2>
-
+                            <div class="mb-3">
+                                <div class="row align-items-center border-bottom py-3">
+                                    <div class="col">
+                                        <p class="font-16 mb-0">Item/Região</p>
+                                    </div>
+                                    <div class="col">
+                                        <div class="position-relative">
+                                            <div class="position-absolute top-50 start-50 translate-middle">
+                                                <p class="font-30 fw-bold color-light">1</p>
+                                            </div>
+                                            <img src="img/regiao-selecionada.svg" alt="" class="img-fluid mt-4">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="position-relative">
+                                            <div class="position-absolute top-50 start-50 translate-middle">
+                                                <p class="font-30 fw-bold color-light">2</p>
+                                            </div>
+                                            <img src="img/regiao-selecionada.svg" alt="" class="img-fluid mt-4">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="position-relative">
+                                            <div class="position-absolute top-50 start-50 translate-middle">
+                                                <p class="font-30 fw-bold color-light">3</p>
+                                            </div>
+                                            <img src="img/regiao-selecionada.svg" alt="" class="img-fluid mt-4">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="position-relative">
+                                            <div class="position-absolute top-50 start-50 translate-middle">
+                                                <p class="font-30 fw-bold color-light">4</p>
+                                            </div>
+                                            <img src="img/regiao-selecionada.svg" alt="" class="img-fluid mt-4">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center border-bottom py-3">
+                                    <div class="col">
+                                        <p class="font-16 mb-0">Preço de Venda Unitário</p>
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-control form-control-sm" type="text" value="1.000,00" aria-label="">
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-control form-control-sm" type="text" value="1.000,00" aria-label="">
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-control form-control-sm" type="text" value="1.000,00" aria-label="">
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-control form-control-sm" type="text" value="1.000,00" aria-label="">
+                                    </div>
+                                </div>
+                                <div class="row align-items-center border-bottom py-3">
+                                    <div class="col">
+                                        <p class="font-16 mb-0">Qtde Venda Planejada</p>
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-control form-control-sm" type="text" value="0" aria-label="">
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-control form-control-sm" type="text" value="0" aria-label="">
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-control form-control-sm" type="text" value="0" aria-label="">
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-control form-control-sm" type="text" value="0" aria-label="">
+                                    </div>
+                                </div>
+                                <div class="row align-items-center border-bottom py-3">
+                                    <div class="col">
+                                        <p class="font-16 mb-0">Condição Pagamento</p>
+                                    </div>
+                                    <div class="col">
+                                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                            <option>Selecione</option>
+                                            <option value="1" selected>A VISTA</option>
+                                            <option value="2">A VISTA</option>
+                                            <option value="3">A VISTA</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                            <option>Selecione</option>
+                                            <option value="1" selected>A VISTA</option>
+                                            <option value="2">A VISTA</option>
+                                            <option value="3">A VISTA</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                            <option>Selecione</option>
+                                            <option value="1" selected>A VISTA</option>
+                                            <option value="2">A VISTA</option>
+                                            <option value="3">A VISTA</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                            <option>Selecione</option>
+                                            <option value="1" selected>A VISTA</option>
+                                            <option value="2">A VISTA</option>
+                                            <option value="3">A VISTA</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center border-bottom py-3">
+                                    <div class="col">
+                                        <p class="font-16 mb-0">Receita Prevista</p>
+                                    </div>
+                                    <div class="col">
+                                        <p class="font-16 fw-bold mb-0">0,00</p>
+                                    </div>
+                                    <div class="col">
+                                        <p class="font-16 fw-bold mb-0">0,00</p>
+                                    </div>
+                                    <div class="col">
+                                        <p class="font-16 fw-bold mb-0">0,00</p>
+                                    </div>
+                                    <div class="col">
+                                        <p class="font-16 fw-bold mb-0">0,00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-cenario">
+                                <div class="row row-cols-5 row-cols-lg-5 align-items-center border-bottom pb-3">
+                                    <div class="col">
+                                        <p class="font-16 mb-0">% Propaganda</p>
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-control form-control-sm" type="number" value="0" min="0" aria-label="">
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-control form-control-sm" type="number" value="0" min="0" aria-label="">
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-control form-control-sm" type="number" value="0" min="0" aria-label="">
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-control form-control-sm" type="number" value="0" min="0" aria-label="">
+                                    </div>
+                                </div>
+                                <div class="row row-cols-5 row-cols-lg-5 align-items-center border-bottom py-3">
+                                    <div class="col">
+                                        <p class="font-16 mb-0">Valor Propaganda</p>
+                                    </div>
+                                    <div class="col">
+                                        <p class="font-16 fw-bold mb-0">0,00</p>
+                                    </div>
+                                    <div class="col">
+                                        <p class="font-16 fw-bold mb-0">0,00</p>
+                                    </div>
+                                    <div class="col">
+                                        <p class="font-16 fw-bold mb-0">0,00</p>
+                                    </div>
+                                    <div class="col">
+                                        <p class="font-16 fw-bold mb-0">0,00</p>
+                                    </div>
+                                </div>
+                                <div class="row row-cols-5 row-cols-lg-5 align-items-center border-bottom py-3">
+                                    <div class="col">
+                                        <p class="font-16 mb-0">Contrata Vendedores</p>
+                                    </div>
+                                    <div class="col">
+                                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                            <option>Selecione</option>
+                                            <option value="1" selected>0</option>
+                                            <option value="2">0</option>
+                                            <option value="3">0</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                            <option>Selecione</option>
+                                            <option value="1" selected>0</option>
+                                            <option value="2">0</option>
+                                            <option value="3">0</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                            <option>Selecione</option>
+                                            <option value="1" selected>0</option>
+                                            <option value="2">0</option>
+                                            <option value="3">0</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                            <option>Selecione</option>
+                                            <option value="1" selected>0</option>
+                                            <option value="2">0</option>
+                                            <option value="3">0</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row row-cols-5 row-cols-lg-5 align-items-center border-bottom py-3">
+                                    <div class="col">
+                                        <p class="font-16 mb-0">Força Vendas Ativas</p>
+                                    </div>
+                                    <div class="col">
+                                        <p class="font-16 fw-bold mb-0">0,00</p>
+                                    </div>
+                                    <div class="col">
+                                        <p class="font-16 fw-bold mb-0">0,00</p>
+                                    </div>
+                                    <div class="col">
+                                        <p class="font-16 fw-bold mb-0">0,00</p>
+                                    </div>
+                                    <div class="col">
+                                        <p class="font-16 fw-bold mb-0">0,00</p>
+                                    </div>
+                                </div>
+                                <div class="row row-cols-5 row-cols-lg-5 align-items-center pt-3">
+                                    <div class="col">
+                                        <p class="font-16 mb-0">%  de Comissão</p>
+                                    </div>
+                                    <div class="col">
+                                        <input type="range" value="80" min="10" max="100" step="1" />
+                                        <input class="resultado" type="text" value="80" size="3" />
+                                    </div>
+                                    <div class="col">
+                                        <input type="range" value="80" min="10" max="100" step="1" />
+                                        <input class="resultado" type="text" value="80" size="3" />
+                                    </div>
+                                    <div class="col">
+                                        <input type="range" value="80" min="10" max="100" step="1" />
+                                        <input class="resultado" type="text" value="80" size="3" />
+                                    </div>
+                                    <div class="col">
+                                        <input type="range" value="80" min="10" max="100" step="1" />
+                                        <input class="resultado" type="text" value="80" size="3" />
+                                    </div>
+                                </div>
+                            </div>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
                         </div>
                         <div class="tab-pane fade" id="pills-gestao" role="tabpanel" aria-labelledby="pills-gestao-tab">
-                            Gestão de Pessoas
+                            <h2 class="font-18 fw-bold color-primary">Decisões de RH</h2>
+                            <div class="card-cenario mb-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="img/gestao-pessoas/icon1.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-2">
+                                                <h2 class="font-14 mb-0 fw-bold">Total Salários</h2>
+                                                <p class="mb-0">R$ 530.450,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="img/gestao-pessoas/icon2.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-2">
+                                                <h2 class="font-14 mb-0 fw-bold">Total Treinamentos</h2>
+                                                <p class="mb-0">R$ 75.000,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="img/gestao-pessoas/icon3.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-2">
+                                                <h2 class="font-14 mb-0 fw-bold">Resp. Social</h2>
+                                                <p class="mb-0">R$ 75.000,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="img/gestao-pessoas/icon4.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-2">
+                                                <h2 class="font-14 mb-0 fw-bold">Total Benefícios</h2>
+                                                <p class="mb-0">R$ 530.450,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-1">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="img/gestao-pessoas/icon5.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-2">
+                                                <p class="mb-0">1</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-1">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="img/gestao-pessoas/icon6.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-2">
+                                                <p class="mb-0">32</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-1">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="img/gestao-pessoas/icon7.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-2">
+                                                <p class="mb-0">1</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-1">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="img/gestao-pessoas/icon8.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-2">
+                                                <p class="mb-0">4</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-1">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="img/gestao-pessoas/icon9.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-2">
+                                                <p class="mb-0">43</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-cenario mb-5">
+                                <div class="row row-cols-4 row-cols-lg-4 align-items-center">
+                                    <div class="col">
+                                        <label for="">Salário Base *</label>
+                                        <input type="text" class="form-control form-control-sm" value="2.000">
+                                    </div>
+                                    <div class="col">
+                                        <label for="">Cotas de Treinamento</label>
+                                        <div class="form-group">
+                                            <input type="range" value="80" min="10" max="100" step="1" />
+                                            <input class="resultado" type="text" value="80" size="3" />
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <label for="">Cotas de Resp. Social</label>
+                                        <div class="form-group">
+                                            <input type="range" value="80" min="10" max="100" step="1" />
+                                            <input class="resultado" type="text" value="80" size="3" />
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="img/gestao-pessoas/satisfacao.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-2">
+                                                <p class="mb-0">Satisfação da Equipe</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="font-18 fw-bold color-primary">Benefícios <span class="text-muted">(clique para selecionar)</span></h2>
+                            <div class="mb-5">
+                                <div class="row row-cols-2 row-cols-md-4 g-4">
+                                    <div class="col">
+                                        <input type="radio" class="btn-check" checked name="options" id="option1" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option1">
+                                            <i class="fa-solid fa-bag-shopping font-30"></i>
+                                            <br>
+                                            Cesta Básica<br>R$ 100,00
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="radio" class="btn-check" checked name="options" id="option2" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option2">
+                                            <i class="fa-solid fa-heart-pulse font-30"></i>
+                                            <br>
+                                            Plano Médico<br>R$ 100,00
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="radio" class="btn-check" checked name="options" id="option3" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option3">
+                                            <i class="fa-solid fa-graduation-cap font-30"></i>
+                                            <br>
+                                            Bolsa Escola<br>R$ 100,00
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="radio" class="btn-check" checked name="options" id="option4" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option4">
+                                            <i class="fa-solid fa-utensils font-30"></i>
+                                            <br>
+                                            Auxilio Alimentação<br>R$ 100,00
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="radio" class="btn-check" checked name="options" id="option5" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option5">
+                                            <i class="fa-solid fa-bus-simple font-30"></i>
+                                            <br>
+                                            Transporte Subsidiado<br>R$ 100,00
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="radio" class="btn-check" checked name="options" id="option6" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option6">
+                                            <i class="fa-solid fa-shield font-30"></i>
+                                            <br>
+                                            Seguro de Vida<br>R$ 100,00
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="radio" class="btn-check" checked name="options" id="option7" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option7">
+                                            <i class="fa-solid fa-tooth font-30"></i>
+                                            <br>
+                                            Assistência Odontologica<br>R$ 100,00
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="radio" class="btn-check" checked name="options" id="option8" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option8">
+                                            <i class="fa-solid fa-star font-30"></i>
+                                            <br>
+                                            Pacote Básico<br>R$ 100,00
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="radio" class="btn-check" checked name="options" id="option9" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option9">
+                                            <i class="fa-solid fa-star font-30"></i>
+                                            <i class="fa-solid fa-star font-30"></i>
+                                            <br>
+                                            Pacote Intermediário<br>R$ 100,00
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="radio" class="btn-check" checked name="options" id="option10" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option10">
+                                            <i class="fa-solid fa-star font-30"></i>
+                                            <i class="fa-solid fa-star font-30"></i>
+                                            <i class="fa-solid fa-star font-30"></i>
+                                            <br>
+                                            Pacote Avançado<br>R$ 100,00
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="font-18 fw-bold color-primary">Oportunidade <span class="text-muted">(clique para selecionar)</span></h2>
+                            <div class="card-cenario p-4">
+                                <div class="row">
+                                    <div class="col-lg-9">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="img/gestao-pessoas/oportunidade.png" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-4">
+                                                <h2 class="font-20 color-primary fw-bold">Biografia</h2>
+                                                <p class="font-16 mb-0">Laura é gerente de operações trabalho na área de vendas há 20 anos. Ao longo deste período aprendeu a desenvolver habilidades de persuasão, de compreensão das necessidades dos clientes e de identificação dos diferentes tipos de clientes e como combater suas objeções de modo a fechar as vendas. Um dos maiores resultados que obtive foi na empresa Jumbitos, onde foi líder de vendas por 10 anos consecutivos e consegui ampliar o rendimento da empresa durante a sua permanência. Atualmente, possuo uma carteira com cerca de 300 clientes ativos. Tem o desejo de seguir na carreira e crescer nela e para isso, pretendo fazer o curso em Mercado de Vendas para poder me desenvolver enquanto profissional e trazer progresso ao departamento comercial das instituições.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <h2 class="font-20 color-primary fw-bold">Informações</h2>
+                                        <p class="font-16 mb-0"><span class="fw-bold">Competências:</span> comunicativa, inteligente, perfil de liderança, bonita e extrovertida</p>
+                                        <p class="font-16 mb-0"><span class="fw-bold">Fraquezas:</span> não é boa em trabalhar em equipe</p>
+                                        <p class="font-16 mb-0"><span class="fw-bold">Salário:</span> R$ 6.420,00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
                         </div>
                         <div class="tab-pane fade" id="pills-bolsa" role="tabpanel" aria-labelledby="pills-bolsa-tab">
                             <div class="row">
@@ -901,7 +1384,201 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="pills-financeiro" role="tabpanel" aria-labelledby="pills-financeiro-tab">
-                            Financeiro
+                            <h2 class="font-18 fw-bold color-primary">Financeiro</h2>
+                            <div class="card-cenario mb-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="img/financeiro/icon1.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-2">
+                                                <h2 class="font-14 mb-0 fw-bold">Caixa + Aplicações</h2>
+                                                <p class="mb-0">135.705,85</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="img/financeiro/icon2.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-2">
+                                                <h2 class="font-14 mb-0 fw-bold">Saldo Disp.</h2>
+                                                <p class="mb-0">862.275,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="img/financeiro/icon3.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-2">
+                                                <h2 class="font-14 mb-0 fw-bold">Limite de Cred. Disp.</h2>
+                                                <p class="mb-0">862.275,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="img/financeiro/icon4.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-2">
+                                                <h2 class="font-14 mb-0 fw-bold">$ Compra Informação</h2>
+                                                <p class="mb-0">862.275,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-cenario mb-5">
+                                <div class="row row-cols-4 row-cols-lg-4 align-items-center">
+                                    <div class="col">
+                                        <label for="">Banco (s)</label>
+                                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                            <option>Selecione</option>
+                                            <option value="1" selected>2 Lotes</option>
+                                            <option value="2">2 Lotes</option>
+                                            <option value="3">2 Lotes</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <label for="">Esprestimos Contratado</label>
+                                        <input type="text" class="form-control form-control-sm" value="0,00">
+                                    </div>
+                                    <div class="col">
+                                        <label for="">Descontos e Duplicatas</label>
+                                        <input type="text" class="form-control form-control-sm" value="0,00">
+                                    </div>
+                                    <div class="col">
+                                        <label for="">Aplicação</label>
+                                        <input type="text" class="form-control form-control-sm" value="0,00">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="font-18 fw-bold color-primary">Compra de Informações</h2>
+                            <div class="mb-5">
+                                <div class="row row-cols-2 row-cols-md-4 g-4">
+                                    <div class="col">
+                                        <input type="radio" class="btn-check" checked name="options" id="option1" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option1">
+                                            <i class="fa-solid fa-chart-pie font-30"></i>
+                                            <br>
+                                            Participação<br>de Mercado na Rodada
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="radio" class="btn-check" checked name="options" id="option2" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option2">
+                                            <i class="fa-solid fa-users font-30"></i>
+                                            <br>
+                                            Salários Pagos<br>pelos Concorrentes
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="radio" class="btn-check" checked name="options" id="option3" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option3">
+                                            <i class="fa-solid fa-sack-dollar font-30"></i>
+                                            <br>
+                                            Preço de Venda<br>Concorrência
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="radio" class="btn-check" checked name="options" id="option4" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option4">
+                                            <i class="fa-solid fa-bullhorn font-30"></i>
+                                            <br>
+                                            Investimento<br>em Marketing
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="radio" class="btn-check" checked name="options" id="option5" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option5">
+                                            <i class="fa-solid fa-magnifying-glass font-30"></i>
+                                            <br>
+                                            Investimento<br>em P & D
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="radio" class="btn-check" checked name="options" id="option6" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option6">
+                                            <i class="fa-solid fa-industry font-30"></i>
+                                            <br>
+                                            Qtde. Módulos Fabris<br>Concorrentes
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="radio" class="btn-check" checked name="options" id="option7" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option7">
+                                            <i class="fa-solid fa-star font-30"></i>
+                                            <br>
+                                            Qualidade dos Produtos<br>dos Concorrentes
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="radio" class="btn-check" checked name="options" id="option8" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option8">
+                                            <i class="fa-solid fa-chalkboard-user font-30"></i>
+                                            <br>
+                                            Gastos com<br>Treinamento
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="radio" class="btn-check" checked name="options" id="option9" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option9">
+                                            <i class="fa-solid fa-dollar-sign font-30"></i>
+                                            <br>
+                                            Gastos com<br>Benefícios
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="radio" class="btn-check" checked name="options" id="option10" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option10">
+                                            <i class="fa-solid fa-hand-holding-droplet font-30"></i>
+                                            <br>
+                                            Investimento em<br>Responsabilidade Social
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="radio" class="btn-check" checked name="options" id="option8" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option8">
+                                            <i class="fa-solid fa-rotate font-30"></i>
+                                            <br>
+                                            Venda Prevista<br>de Drawback
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="radio" class="btn-check" checked name="options" id="option9" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option9">
+                                            <i class="fa-solid fa-phone font-30"></i>
+                                            <br>
+                                            Canal de Venda<br>por Região
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="radio" class="btn-check" checked name="options" id="option10" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option10">
+                                            <i class="fa-solid fa-map font-30"></i>
+                                            <br>
+                                            Demanda Prevista<br>por Região
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="radio" class="btn-check" checked name="options" id="option10" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option10">
+                                            <i class="fa-solid fa-users font-30"></i>
+                                            <br>
+                                            Quantidade<br>de Vendedores
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
                         </div>
                         <div class="tab-pane fade" id="pills-previsao" role="tabpanel" aria-labelledby="pills-previsao-tab">
                             <div class="row">
