@@ -12,48 +12,30 @@
 </head>
 <body>
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Mapa - Região de Instalação</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <img src="img/regioes.svg" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-lg-6">
-                        <h2 class="font-20 fw-bold">Região 00</h2>
-                        <p class="font-16 mb-0">População: 00.000.000</p>
-                        <p class="font-16 mb-0">Cidades: 000</p>
-                        <p class="font-16 mb-0">Indústrias: 0000x</p>
-                        <p class="font-16">Comércios: 00.000</p>
-
-                        <p class="font-16 fw-bold mb-0">Demanda Prevista</p>
-                        <p class="font-16">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <p class="font-16 fw-bold mb-0">Custo Logístico</p>
-                        <p class="font-16">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <p class="font-16 fw-bold mb-0">Informações Quantidativas</p>
-                        <p class="font-16">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
-                <button type="button" class="btn btn-primary">Selecionar</button>
-            </div>
-          </div>
-        </div>
-    </div>
-
     <nav class="navbar navbar-expand-sm navbar-light">
-          <div class="container">
+          <div class="container-fluid">
             <a class="color-light text-decoration-none font-18 fw-bold" href="painel-geral2.html">
                 <img class="me-2" src="img/arrow_left.svg" alt="">
                 Painel
             </a>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" d="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Período: 08
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">01</a></li>
+                        <li><a class="dropdown-item" href="#">02</a></li>
+                        <li><a class="dropdown-item" href="#">03</a></li>
+                        <li><a class="dropdown-item" href="#">04</a></li>
+                        <li><a class="dropdown-item" href="#">05</a></li>
+                        <li><a class="dropdown-item" href="#">06</a></li>
+                        <li><a class="dropdown-item" href="#">07</a></li>
+                    </ul>
+                    </li>
+                </ul>
+            </div>
             <div class="">
                 <a class="text-light text-decoration-none ms-4" href="#">
                     <i class="bi color-light bi-info-circle"></i>
@@ -61,6 +43,1164 @@
             </div>
       </div>
     </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-1 d-none d-md-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav nav_relatorios flex-column">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active" id="resumo-tab" data-bs-toggle="tab" data-bs-target="#resumo" role="tab" aria-controls="resumo" aria-selected="true">
+                                Resumo Gerencial
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" id="dre-tab" data-bs-toggle="tab" data-bs-target="#dre" role="tab" aria-controls="dre" aria-selected="false">
+                                D.R.E
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" id="balanco-tab" data-bs-toggle="tab" data-bs-target="#balanco" role="tab" aria-controls="balanco" aria-selected="false">
+                                Balanço Patrimonial
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" id="fluxo-tab" data-bs-toggle="tab" data-bs-target="#fluxo" role="tab" aria-controls="fluxo" aria-selected="false">
+                                Fluxo de Caixa
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Indicadores Gerenciais
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Condições Gerais
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Painel de Resultados
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-11 tab-content ml-sm-auto pb-4 mb-5 col-lg-11 pt-3 px-4">
+
+                <div class="tab-pane fade show active" id="resumo" role="tabpanel" aria-labelledby="resumo-tab">
+                    <div class="row justify-content-center mt-2">
+                        <div class="col-md-12">
+                            <h2 class="font-20 mb-3 fw-bold text-uppercase">Resumo Gerencial</h2>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="row justify-content-center">
+                                <div class="col-md-12 mb-4">
+                                    <div class="card-etapa d-flex align-items-center bg-primary py-2">
+                                        <i class="bi font-20 bi-gear-fill color-light"></i>
+                                        <span class="font-20 ms-2 fw-bold color-light">Produção</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="card-etapa py-3">
+                                        <div class="row d-flex align-items-center justify-content-center">
+                                            <div class="col-md-3">
+                                                <img width="70" class="ms-2" src="img/icons/rel/icon_1.svg" alt="">
+                                            </div>
+                                            <div class="col-md-9">
+                                                <span class="ms-2 fw-bold color-tertiary d-block">Produção</span>
+                                                <p class="mb-0 ms-2 color-primary fw-bold font-26">1.026</p>
+                                            </div>
+                                            <div class="col-md-12 mt-2">
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <p class="mb-0 font-14 text-center mt-3">Variação do Período Anterior - 33%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="card-etapa py-3">
+                                        <div class="row d-flex align-items-center justify-content-center">
+                                            <div class="col-md-3">
+                                                <img width="70" class="ms-2" src="img/icons/rel/icon_2.svg" alt="">
+                                            </div>
+                                            <div class="col-md-9">
+                                                <span class="ms-2 fw-bold color-tertiary d-block">Estoque Final P.A.</span>
+                                                <p class="mb-0 ms-2 color-primary fw-bold font-26">559</p>
+                                            </div>
+                                            <div class="col-md-12 mt-2">
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <p class="mb-0 font-14 text-center mt-3">Variação do Período Anterior - 33%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="card-etapa py-3">
+                                        <div class="row d-flex align-items-center justify-content-center">
+                                            <div class="col-md-3">
+                                                <img width="70" class="ms-2" src="img/icons/rel/icon_3.svg" alt="">
+                                            </div>
+                                            <div class="col-md-9">
+                                                <span class="ms-2 fw-bold color-tertiary d-block">Ociosidade</span>
+                                                <p class="mb-0 ms-2 color-primary fw-bold font-26">14%</p>
+                                            </div>
+                                            <div class="col-md-12 mt-2">
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 14%" aria-valuenow="14" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <p class="mb-0 font-14 text-center mt-3">Variação do Período Anterior - 14%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-md-12">
+                            <div class="row justify-content-center">
+                                <div class="col-md-12 mb-4">
+                                    <div class="card-etapa d-flex align-items-center bg-second-blue py-2">
+                                        <span><img src="img/icons/icon_mkt.svg" alt=""></span>
+                                        <span class="font-20 ms-2 fw-bold color-light">Marketing</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="card-etapa py-3">
+                                        <div class="row d-flex align-items-center justify-content-center">
+                                            <div class="col-md-3">
+                                                <img width="70" class="ms-2" src="img/icons/rel/icon_4.svg" alt="">
+                                            </div>
+                                            <div class="col-md-9">
+                                                <span class="ms-2 fw-bold color-tertiary d-block">Vendas</span>
+                                                <p class="mb-0 ms-2 color-primary fw-bold font-26">520</p>
+                                            </div>
+                                            <div class="col-md-12 mt-2">
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-second-blue" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <p class="mb-0 font-14 text-center mt-3">Variação do Período Anterior - 33%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="card-etapa py-3">
+                                        <div class="row d-flex align-items-center justify-content-center">
+                                            <div class="col-md-3">
+                                                <img width="70" class="ms-2" src="img/icons/rel/icon_5.svg" alt="">
+                                            </div>
+                                            <div class="col-md-9">
+                                                <span class="ms-2 fw-bold color-tertiary d-block">Receita de Vendas</span>
+                                                <p class="mb-0 ms-2 color-primary fw-bold font-26">R$ 999.580,00</p>
+                                            </div>
+                                            <div class="col-md-12 mt-2">
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-second-blue" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <p class="mb-0 font-14 text-center mt-3">Variação do Período Anterior - 33%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="card-etapa py-3">
+                                        <div class="row d-flex align-items-center justify-content-center">
+                                            <div class="col-md-3">
+                                                <img width="70" class="ms-2" src="img/icons/rel/icon_6.svg" alt="">
+                                            </div>
+                                            <div class="col-md-9">
+                                                <span class="ms-2 fw-bold color-tertiary d-block">Conversão de Vendas</span>
+                                                <p class="mb-0 ms-2 color-primary fw-bold font-26">43%</p>
+                                            </div>
+                                            <div class="col-md-12 mt-2">
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-second-blue" role="progressbar" style="width: 14%" aria-valuenow="14" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <p class="mb-0 font-14 text-center mt-3">Variação do Período Anterior - 14%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-md-12">
+                            <div class="row justify-content-center">
+                                <div class="col-md-12 mb-4">
+                                    <div class="card-etapa bg-primary d-flex align-items-center py-2">
+                                        <span><img src="img/icons/icon_rh.svg" alt=""></span>
+                                        <span class="font-20 ms-2 color-light fw-bold">Recursos Humanos</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="card-etapa py-3">
+                                        <div class="row d-flex align-items-center justify-content-center">
+                                            <div class="col-md-3">
+                                                <img width="70" class="ms-2" src="img/icons/icon1.svg" alt="">
+                                            </div>
+                                            <div class="col-md-9">
+                                                <span class="ms-2 fw-bold color-tertiary d-block">Produtividade</span>
+                                                <p class="mb-0 ms-2 color-primary fw-bold font-26">1280</p>
+                                            </div>
+                                            <div class="col-md-12 mt-2">
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <p class="mb-0 font-14 text-center mt-3">Variação do Período Anterior - 33%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="card-etapa py-3">
+                                        <div class="row d-flex align-items-center justify-content-center">
+                                            <div class="col-md-3">
+                                                <img width="70" class="ms-2" src="img/icons/rel/icon_8.svg" alt="">
+                                            </div>
+                                            <div class="col-md-9">
+                                                <span class="ms-2 fw-bold color-tertiary d-block">Satisfação Equipe</span>
+                                                <p class="mb-0 ms-2 color-primary fw-bold font-26">150%</p>
+                                            </div>
+                                            <div class="col-md-12 mt-2">
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <p class="mb-0 font-14 text-center mt-3">Variação do Período Anterior - 33%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="card-etapa py-3">
+                                        <div class="row d-flex align-items-center justify-content-center">
+                                            <div class="col-md-3">
+                                                <img width="70" class="ms-2" src="img/icons/rel/icon_9.svg" alt="">
+                                            </div>
+                                            <div class="col-md-9">
+                                                <span class="ms-2 fw-bold color-tertiary d-block">Grau de Inovação Total</span>
+                                                <p class="mb-0 ms-2 color-primary fw-bold font-26">29%</p>
+                                            </div>
+                                            <div class="col-md-12 mt-2">
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 14%" aria-valuenow="14" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <p class="mb-0 font-14 text-center mt-3">Variação do Período Anterior - 14%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-md-12">
+                            <div class="row justify-content-center">
+                                <div class="col-md-12 mb-4">
+                                    <div class="card-etapa d-flex align-items-center bg-second-blue py-2">
+                                        <span><img src="img/icons/icon_fin.svg" alt=""></span>
+                                        <span class="font-20 ms-2 fw-bold color-light">Financeiro</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="card-etapa py-3">
+                                        <div class="row d-flex align-items-center justify-content-center">
+                                            <div class="col-md-3">
+                                                <img width="70" class="ms-2" src="img/icons/rel/icon_10.svg" alt="">
+                                            </div>
+                                            <div class="col-md-9">
+                                                <span class="ms-2 fw-bold color-tertiary d-block">Disponibilidade no Caixa</span>
+                                                <p class="mb-0 ms-2 color-primary fw-bold font-26">$ 100</p>
+                                            </div>
+                                            <div class="col-md-12 mt-2">
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-second-blue" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <p class="mb-0 font-14 text-center mt-3">Variação do Período Anterior - 33%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="card-etapa py-3">
+                                        <div class="row d-flex align-items-center justify-content-center">
+                                            <div class="col-md-3">
+                                                <img width="70" class="ms-2" src="img/icons/rel/icon_11.svg" alt="">
+                                            </div>
+                                            <div class="col-md-9">
+                                                <span class="ms-2 fw-bold color-tertiary d-block">Contas a Receber</span>
+                                                <p class="mb-0 ms-2 color-primary fw-bold font-26">$ 3000</p>
+                                            </div>
+                                            <div class="col-md-12 mt-2">
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-second-blue" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <p class="mb-0 font-14 text-center mt-3">Variação do Período Anterior - 33%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="card-etapa py-3">
+                                        <div class="row d-flex align-items-center justify-content-center">
+                                            <div class="col-md-3">
+                                                <img width="70" class="ms-2" src="img/icons/rel/icon_12.svg" alt="">
+                                            </div>
+                                            <div class="col-md-9">
+                                                <span class="ms-2 fw-bold color-tertiary d-block">Contas a Pagar</span>
+                                                <p class="mb-0 ms-2 color-primary fw-bold font-26">1500</p>
+                                            </div>
+                                            <div class="col-md-12 mt-2">
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-second-blue" role="progressbar" style="width: 14%" aria-valuenow="14" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <p class="mb-0 font-14 text-center mt-3">Variação do Período Anterior - 14%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="dre" role="tabpanel" aria-labelledby="dre-tab">
+                    <div class="row justify-content-center mt-2">
+                        <div class="col-md-12">
+                            <h2 class="font-20 mb-3 fw-bold text-uppercase">D.R.E</h2>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead class="bg-primary">
+                                        <tr>
+                                            <th scope="col">&nbsp;</th>
+                                            <th class="color-light" scope="col">01</th>
+                                            <th class="color-light" scope="col">02</th>
+                                            <th class="color-light" scope="col">03</th>
+                                            <th class="color-light" scope="col">04</th>
+                                            <th class="color-light" scope="col">05</th>
+                                            <th class="color-light" scope="col">06</th>
+                                            <th class="color-light" scope="col">07</th>
+                                            <th class="color-light" scope="col">08</th>
+                                            <th class="color-light" scope="col">Total Acumulado</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>RECEITA DE VENDAS</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>CUSTO DOS PRODUTOS VENDIDOS</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>LUCRO/PREJUIZO BRUTO</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>CUSTO FIXO DE PRODUÇÃO</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>RECEITA DE VENDAS</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>CUSTO DOS PRODUTOS VENDIDOS</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>LUCRO/PREJUIZO BRUTO</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>CUSTO FIXO DE PRODUÇÃO</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>RECEITA DE VENDAS</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>CUSTO DOS PRODUTOS VENDIDOS</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>LUCRO/PREJUIZO BRUTO</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>CUSTO FIXO DE PRODUÇÃO</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>RECEITA DE VENDAS</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>CUSTO DOS PRODUTOS VENDIDOS</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>LUCRO/PREJUIZO BRUTO</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>CUSTO FIXO DE PRODUÇÃO</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>RECEITA DE VENDAS</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>CUSTO DOS PRODUTOS VENDIDOS</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>LUCRO/PREJUIZO BRUTO</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>CUSTO FIXO DE PRODUÇÃO</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="balanco" role="tabpanel" aria-labelledby="balanco-tab">
+                    <div class="row justify-content-center mt-2">
+                        <div class="col-md-12">
+                            <h2 class="font-20 mb-3 fw-bold text-uppercase">BALANÇO PATRIMONIAL</h2>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead class="bg-primary">
+                                        <tr>
+                                            <th scope="col">&nbsp;</th>
+                                            <th class="color-light" scope="col">01</th>
+                                            <th class="color-light" scope="col">02</th>
+                                            <th class="color-light" scope="col">03</th>
+                                            <th class="color-light" scope="col">04</th>
+                                            <th class="color-light" scope="col">05</th>
+                                            <th class="color-light" scope="col">06</th>
+                                            <th class="color-light" scope="col">07</th>
+                                            <th class="color-light" scope="col">08</th>
+                                            <th class="color-light" scope="col">Total Acumulado</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>RECEITA DE VENDAS</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>CUSTO DOS PRODUTOS VENDIDOS</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>LUCRO/PREJUIZO BRUTO</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>CUSTO FIXO DE PRODUÇÃO</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>RECEITA DE VENDAS</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>CUSTO DOS PRODUTOS VENDIDOS</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>LUCRO/PREJUIZO BRUTO</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>CUSTO FIXO DE PRODUÇÃO</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>RECEITA DE VENDAS</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>CUSTO DOS PRODUTOS VENDIDOS</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>LUCRO/PREJUIZO BRUTO</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>CUSTO FIXO DE PRODUÇÃO</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>RECEITA DE VENDAS</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>CUSTO DOS PRODUTOS VENDIDOS</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>LUCRO/PREJUIZO BRUTO</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>CUSTO FIXO DE PRODUÇÃO</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>RECEITA DE VENDAS</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>CUSTO DOS PRODUTOS VENDIDOS</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>LUCRO/PREJUIZO BRUTO</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>CUSTO FIXO DE PRODUÇÃO</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="fluxo" role="tabpanel" aria-labelledby="fluxo-tab">
+                    <div class="row justify-content-center mt-2">
+                        <div class="col-md-12">
+                            <h2 class="font-20 mb-3 fw-bold text-uppercase">FLUXO DE CAIXA</h2>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead class="bg-primary">
+                                        <tr>
+                                            <th scope="col">&nbsp;</th>
+                                            <th class="color-light" scope="col">01</th>
+                                            <th class="color-light" scope="col">02</th>
+                                            <th class="color-light" scope="col">03</th>
+                                            <th class="color-light" scope="col">04</th>
+                                            <th class="color-light" scope="col">05</th>
+                                            <th class="color-light" scope="col">06</th>
+                                            <th class="color-light" scope="col">07</th>
+                                            <th class="color-light" scope="col">08</th>
+                                            <th class="color-light" scope="col">Total Acumulado</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>RECEITA DE VENDAS</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>CUSTO DOS PRODUTOS VENDIDOS</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>LUCRO/PREJUIZO BRUTO</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>CUSTO FIXO DE PRODUÇÃO</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>RECEITA DE VENDAS</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>CUSTO DOS PRODUTOS VENDIDOS</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>LUCRO/PREJUIZO BRUTO</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>CUSTO FIXO DE PRODUÇÃO</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>RECEITA DE VENDAS</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>CUSTO DOS PRODUTOS VENDIDOS</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>LUCRO/PREJUIZO BRUTO</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>CUSTO FIXO DE PRODUÇÃO</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>RECEITA DE VENDAS</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>CUSTO DOS PRODUTOS VENDIDOS</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>LUCRO/PREJUIZO BRUTO</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>CUSTO FIXO DE PRODUÇÃO</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>RECEITA DE VENDAS</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>CUSTO DOS PRODUTOS VENDIDOS</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                            <th class="text-danger">1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>LUCRO/PREJUIZO BRUTO</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                        <tr>
+                                            <th>CUSTO FIXO DE PRODUÇÃO</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                            <th>1.834.800,00</th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+
+        </div>
+    </div>
 
     <div class="footer fixed-bottom">
         <div class="container-fluid">

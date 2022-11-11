@@ -76,11 +76,11 @@
                                                 </thead>
                                                 <tbody class="tableScroll">
                                                     <tr>
-                                                        <th>ASSISTENCIA ODONTOLOGICA</th>
+                                                        <th>ASSISTENCIA ODONTOLÓGICA</th>
                                                         <td>R$ 100.00</td>
                                                     </tr>
                                                     <tr>
-                                                        <th>AUXILIO ALIMENTACAO</th>
+                                                        <th>AUXILIO ALIMENTAÇÃO</th>
                                                         <td>R$ 100.00</td>
                                                     </tr>
                                                     <tr>
@@ -88,7 +88,7 @@
                                                         <td>R$ 100.00</td>
                                                     </tr>
                                                     <tr>
-                                                        <th>CESTA BASICA</th>
+                                                        <th>CESTA BÁSICA</th>
                                                         <td>R$ 100.00</td>
                                                     </tr>
                                                 </tbody>
@@ -292,6 +292,24 @@
                 <img class="me-2" src="img/arrow_left.svg" alt="">
                 Fase 2 - Atividades Empresariais
             </a>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" d="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Período: 08
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">01</a></li>
+                        <li><a class="dropdown-item" href="#">02</a></li>
+                        <li><a class="dropdown-item" href="#">03</a></li>
+                        <li><a class="dropdown-item" href="#">04</a></li>
+                        <li><a class="dropdown-item" href="#">05</a></li>
+                        <li><a class="dropdown-item" href="#">06</a></li>
+                        <li><a class="dropdown-item" href="#">07</a></li>
+                    </ul>
+                    </li>
+                </ul>
+            </div>
             <div class="">
                 <a class="text-light fw-bold text-decoration-none ms-4" data-bs-toggle="modal" href="#modalCenario" role="button">
                     <i class="bi me-2 color-light bi-controller"></i>
@@ -312,7 +330,7 @@
       </div>
     </nav>
 
-    <div class="etapas_topo py-3">
+    <div class="etapas_topo overflow-scroll py-3">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -809,6 +827,14 @@
                                             <img src="img/regiao-selecionada.svg" alt="" class="img-fluid mt-4">
                                         </div>
                                     </div>
+                                    <div class="col">
+                                        <div class="position-relative">
+                                            <div class="position-absolute top-50 start-50 translate-middle">
+                                                <p class="font-30 fw-bold color-light">5</p>
+                                            </div>
+                                            <img src="img/regiao-selecionada.svg" alt="" class="img-fluid mt-4">
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="row align-items-center border-bottom py-3">
                                     <div class="col">
@@ -826,10 +852,16 @@
                                     <div class="col">
                                         <input class="form-control form-control-sm" type="text" value="1.000,00" aria-label="">
                                     </div>
+                                    <div class="col">
+                                        <input class="form-control form-control-sm" type="text" value="1.000,00" aria-label="">
+                                    </div>
                                 </div>
                                 <div class="row align-items-center border-bottom py-3">
                                     <div class="col">
                                         <p class="font-16 mb-0">Qtde Venda Planejada</p>
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-control form-control-sm" type="text" value="0" aria-label="">
                                     </div>
                                     <div class="col">
                                         <input class="form-control form-control-sm" type="text" value="0" aria-label="">
@@ -880,6 +912,14 @@
                                             <option value="3">A VISTA</option>
                                         </select>
                                     </div>
+                                    <div class="col">
+                                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                            <option>Selecione</option>
+                                            <option value="1" selected>A VISTA</option>
+                                            <option value="2">A VISTA</option>
+                                            <option value="3">A VISTA</option>
+                                        </select>
+                                    </div>
                                 </div>
                                 <div class="row align-items-center border-bottom py-3">
                                     <div class="col">
@@ -897,10 +937,13 @@
                                     <div class="col">
                                         <p class="font-16 fw-bold mb-0">0,00</p>
                                     </div>
+                                    <div class="col">
+                                        <p class="font-16 fw-bold mb-0">0,00</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="card-cenario">
-                                <div class="row row-cols-5 row-cols-lg-5 align-items-center border-bottom pb-3">
+                                <div class="row row-cols-6 row-cols-lg-6 align-items-center border-bottom pb-3">
                                     <div class="col">
                                         <p class="font-16 mb-0">% Propaganda</p>
                                     </div>
@@ -916,8 +959,11 @@
                                     <div class="col">
                                         <input class="form-control form-control-sm" type="number" value="0" min="0" aria-label="">
                                     </div>
+                                    <div class="col">
+                                        <input class="form-control form-control-sm" type="number" value="0" min="0" aria-label="">
+                                    </div>
                                 </div>
-                                <div class="row row-cols-5 row-cols-lg-5 align-items-center border-bottom py-3">
+                                <div class="row row-cols-6 row-cols-lg-6 align-items-center border-bottom py-3">
                                     <div class="col">
                                         <p class="font-16 mb-0">Valor Propaganda</p>
                                     </div>
@@ -933,8 +979,11 @@
                                     <div class="col">
                                         <p class="font-16 fw-bold mb-0">0,00</p>
                                     </div>
+                                    <div class="col">
+                                        <p class="font-16 fw-bold mb-0">0,00</p>
+                                    </div>
                                 </div>
-                                <div class="row row-cols-5 row-cols-lg-5 align-items-center border-bottom py-3">
+                                <div class="row row-cols-6 row-cols-lg-6 align-items-center border-bottom py-3">
                                     <div class="col">
                                         <p class="font-16 mb-0">Contrata Vendedores</p>
                                     </div>
@@ -970,8 +1019,16 @@
                                             <option value="3">0</option>
                                         </select>
                                     </div>
+                                    <div class="col">
+                                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                            <option>Selecione</option>
+                                            <option value="1" selected>0</option>
+                                            <option value="2">0</option>
+                                            <option value="3">0</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="row row-cols-5 row-cols-lg-5 align-items-center border-bottom py-3">
+                                <div class="row row-cols-6 row-cols-lg-6 align-items-center border-bottom py-3">
                                     <div class="col">
                                         <p class="font-16 mb-0">Força Vendas Ativas</p>
                                     </div>
@@ -987,10 +1044,17 @@
                                     <div class="col">
                                         <p class="font-16 fw-bold mb-0">0,00</p>
                                     </div>
+                                    <div class="col">
+                                        <p class="font-16 fw-bold mb-0">0,00</p>
+                                    </div>
                                 </div>
-                                <div class="row row-cols-5 row-cols-lg-5 align-items-center pt-3">
+                                <div class="row row-cols-6 row-cols-lg-6 align-items-center pt-3">
                                     <div class="col">
                                         <p class="font-16 mb-0">%  de Comissão</p>
+                                    </div>
+                                    <div class="col">
+                                        <input type="range" value="80" min="10" max="100" step="1" />
+                                        <input class="resultado" type="text" value="80" size="3" />
                                     </div>
                                     <div class="col">
                                         <input type="range" value="80" min="10" max="100" step="1" />
@@ -1147,76 +1211,76 @@
                                 </div>
                             </div>
 
-                            <h2 class="font-18 fw-bold color-primary">Benefícios <span class="text-muted">(clique para selecionar)</span></h2>
+                            <h2 class="font-18 fw-bold color-primary">Benefícios <span class="text-muted font-12">(clique para selecionar)</span></h2>
                             <div class="mb-5">
                                 <div class="row row-cols-2 row-cols-md-4 g-4">
                                     <div class="col">
-                                        <input type="radio" class="btn-check" checked name="options" id="option1" autocomplete="off">
-                                        <label class="btn btn-escolha w-100" for="option1">
+                                        <input type="checkbox" class="btn-check" id="option15" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option15">
                                             <i class="fa-solid fa-bag-shopping font-30"></i>
                                             <br>
                                             Cesta Básica<br>R$ 100,00
                                         </label>
                                     </div>
                                     <div class="col">
-                                        <input type="radio" class="btn-check" checked name="options" id="option2" autocomplete="off">
-                                        <label class="btn btn-escolha w-100" for="option2">
+                                        <input type="checkbox" class="btn-check" id="option16" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option16">
                                             <i class="fa-solid fa-heart-pulse font-30"></i>
                                             <br>
                                             Plano Médico<br>R$ 100,00
                                         </label>
                                     </div>
                                     <div class="col">
-                                        <input type="radio" class="btn-check" checked name="options" id="option3" autocomplete="off">
-                                        <label class="btn btn-escolha w-100" for="option3">
+                                        <input type="checkbox" class="btn-check" id="option17" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option17">
                                             <i class="fa-solid fa-graduation-cap font-30"></i>
                                             <br>
                                             Bolsa Escola<br>R$ 100,00
                                         </label>
                                     </div>
                                     <div class="col">
-                                        <input type="radio" class="btn-check" checked name="options" id="option4" autocomplete="off">
-                                        <label class="btn btn-escolha w-100" for="option4">
+                                        <input type="checkbox" class="btn-check" id="option18" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option18">
                                             <i class="fa-solid fa-utensils font-30"></i>
                                             <br>
                                             Auxilio Alimentação<br>R$ 100,00
                                         </label>
                                     </div>
                                     <div class="col">
-                                        <input type="radio" class="btn-check" checked name="options" id="option5" autocomplete="off">
-                                        <label class="btn btn-escolha w-100" for="option5">
+                                        <input type="checkbox" class="btn-check" id="option19" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option19">
                                             <i class="fa-solid fa-bus-simple font-30"></i>
                                             <br>
                                             Transporte Subsidiado<br>R$ 100,00
                                         </label>
                                     </div>
                                     <div class="col">
-                                        <input type="radio" class="btn-check" checked name="options" id="option6" autocomplete="off">
-                                        <label class="btn btn-escolha w-100" for="option6">
+                                        <input type="checkbox" class="btn-check" id="option20" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option20">
                                             <i class="fa-solid fa-shield font-30"></i>
                                             <br>
                                             Seguro de Vida<br>R$ 100,00
                                         </label>
                                     </div>
                                     <div class="col">
-                                        <input type="radio" class="btn-check" checked name="options" id="option7" autocomplete="off">
-                                        <label class="btn btn-escolha w-100" for="option7">
+                                        <input type="checkbox" class="btn-check" id="option21" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option21">
                                             <i class="fa-solid fa-tooth font-30"></i>
                                             <br>
                                             Assistência Odontologica<br>R$ 100,00
                                         </label>
                                     </div>
                                     <div class="col">
-                                        <input type="radio" class="btn-check" checked name="options" id="option8" autocomplete="off">
-                                        <label class="btn btn-escolha w-100" for="option8">
+                                        <input type="checkbox" class="btn-check" id="option22" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option22">
                                             <i class="fa-solid fa-star font-30"></i>
                                             <br>
                                             Pacote Básico<br>R$ 100,00
                                         </label>
                                     </div>
                                     <div class="col">
-                                        <input type="radio" class="btn-check" checked name="options" id="option9" autocomplete="off">
-                                        <label class="btn btn-escolha w-100" for="option9">
+                                        <input type="checkbox" class="btn-check" id="option23" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option23">
                                             <i class="fa-solid fa-star font-30"></i>
                                             <i class="fa-solid fa-star font-30"></i>
                                             <br>
@@ -1224,8 +1288,8 @@
                                         </label>
                                     </div>
                                     <div class="col">
-                                        <input type="radio" class="btn-check" checked name="options" id="option10" autocomplete="off">
-                                        <label class="btn btn-escolha w-100" for="option10">
+                                        <input type="checkbox" class="btn-check" id="option24" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option24">
                                             <i class="fa-solid fa-star font-30"></i>
                                             <i class="fa-solid fa-star font-30"></i>
                                             <i class="fa-solid fa-star font-30"></i>
@@ -1236,7 +1300,7 @@
                                 </div>
                             </div>
 
-                            <h2 class="font-18 fw-bold color-primary">Oportunidade <span class="text-muted">(clique para selecionar)</span></h2>
+                            <h2 class="font-18 fw-bold color-primary">Oportunidade <span class="text-muted font-12">(clique para selecionar)</span></h2>
                             <div class="card-cenario p-4">
                                 <div class="row">
                                     <div class="col-lg-9">
@@ -1463,7 +1527,7 @@
                             <div class="mb-5">
                                 <div class="row row-cols-2 row-cols-md-4 g-4">
                                     <div class="col">
-                                        <input type="radio" class="btn-check" checked name="options" id="option1" autocomplete="off">
+                                        <input type="checkbox" class="btn-check" id="option1" autocomplete="off">
                                         <label class="btn btn-escolha w-100" for="option1">
                                             <i class="fa-solid fa-chart-pie font-30"></i>
                                             <br>
@@ -1471,7 +1535,7 @@
                                         </label>
                                     </div>
                                     <div class="col">
-                                        <input type="radio" class="btn-check" checked name="options" id="option2" autocomplete="off">
+                                        <input type="checkbox" class="btn-check" id="option2" autocomplete="off">
                                         <label class="btn btn-escolha w-100" for="option2">
                                             <i class="fa-solid fa-users font-30"></i>
                                             <br>
@@ -1479,7 +1543,7 @@
                                         </label>
                                     </div>
                                     <div class="col">
-                                        <input type="radio" class="btn-check" checked name="options" id="option3" autocomplete="off">
+                                        <input type="checkbox" class="btn-check" id="option3" autocomplete="off">
                                         <label class="btn btn-escolha w-100" for="option3">
                                             <i class="fa-solid fa-sack-dollar font-30"></i>
                                             <br>
@@ -1487,7 +1551,7 @@
                                         </label>
                                     </div>
                                     <div class="col">
-                                        <input type="radio" class="btn-check" checked name="options" id="option4" autocomplete="off">
+                                        <input type="checkbox" class="btn-check" id="option4" autocomplete="off">
                                         <label class="btn btn-escolha w-100" for="option4">
                                             <i class="fa-solid fa-bullhorn font-30"></i>
                                             <br>
@@ -1495,7 +1559,7 @@
                                         </label>
                                     </div>
                                     <div class="col">
-                                        <input type="radio" class="btn-check" checked name="options" id="option5" autocomplete="off">
+                                        <input type="checkbox" class="btn-check" id="option5" autocomplete="off">
                                         <label class="btn btn-escolha w-100" for="option5">
                                             <i class="fa-solid fa-magnifying-glass font-30"></i>
                                             <br>
@@ -1503,7 +1567,7 @@
                                         </label>
                                     </div>
                                     <div class="col">
-                                        <input type="radio" class="btn-check" checked name="options" id="option6" autocomplete="off">
+                                        <input type="checkbox" class="btn-check" id="option6" autocomplete="off">
                                         <label class="btn btn-escolha w-100" for="option6">
                                             <i class="fa-solid fa-industry font-30"></i>
                                             <br>
@@ -1511,7 +1575,7 @@
                                         </label>
                                     </div>
                                     <div class="col">
-                                        <input type="radio" class="btn-check" checked name="options" id="option7" autocomplete="off">
+                                        <input type="checkbox" class="btn-check" id="option7" autocomplete="off">
                                         <label class="btn btn-escolha w-100" for="option7">
                                             <i class="fa-solid fa-star font-30"></i>
                                             <br>
@@ -1519,7 +1583,7 @@
                                         </label>
                                     </div>
                                     <div class="col">
-                                        <input type="radio" class="btn-check" checked name="options" id="option8" autocomplete="off">
+                                        <input type="checkbox" class="btn-check" id="option8" autocomplete="off">
                                         <label class="btn btn-escolha w-100" for="option8">
                                             <i class="fa-solid fa-chalkboard-user font-30"></i>
                                             <br>
@@ -1527,7 +1591,7 @@
                                         </label>
                                     </div>
                                     <div class="col">
-                                        <input type="radio" class="btn-check" checked name="options" id="option9" autocomplete="off">
+                                        <input type="checkbox" class="btn-check" id="option9" autocomplete="off">
                                         <label class="btn btn-escolha w-100" for="option9">
                                             <i class="fa-solid fa-dollar-sign font-30"></i>
                                             <br>
@@ -1535,7 +1599,7 @@
                                         </label>
                                     </div>
                                     <div class="col">
-                                        <input type="radio" class="btn-check" checked name="options" id="option10" autocomplete="off">
+                                        <input type="checkbox" class="btn-check" id="option10" autocomplete="off">
                                         <label class="btn btn-escolha w-100" for="option10">
                                             <i class="fa-solid fa-hand-holding-droplet font-30"></i>
                                             <br>
@@ -1543,32 +1607,32 @@
                                         </label>
                                     </div>
                                     <div class="col">
-                                        <input type="radio" class="btn-check" checked name="options" id="option8" autocomplete="off">
-                                        <label class="btn btn-escolha w-100" for="option8">
+                                        <input type="checkbox" class="btn-check" id="option11" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option11">
                                             <i class="fa-solid fa-rotate font-30"></i>
                                             <br>
                                             Venda Prevista<br>de Drawback
                                         </label>
                                     </div>
                                     <div class="col">
-                                        <input type="radio" class="btn-check" checked name="options" id="option9" autocomplete="off">
-                                        <label class="btn btn-escolha w-100" for="option9">
+                                        <input type="checkbox" class="btn-check" id="option12" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option12">
                                             <i class="fa-solid fa-phone font-30"></i>
                                             <br>
                                             Canal de Venda<br>por Região
                                         </label>
                                     </div>
                                     <div class="col">
-                                        <input type="radio" class="btn-check" checked name="options" id="option10" autocomplete="off">
-                                        <label class="btn btn-escolha w-100" for="option10">
+                                        <input type="checkbox" class="btn-check" id="option13" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option13">
                                             <i class="fa-solid fa-map font-30"></i>
                                             <br>
                                             Demanda Prevista<br>por Região
                                         </label>
                                     </div>
                                     <div class="col">
-                                        <input type="radio" class="btn-check" checked name="options" id="option10" autocomplete="off">
-                                        <label class="btn btn-escolha w-100" for="option10">
+                                        <input type="checkbox" class="btn-check" id="option14" autocomplete="off">
+                                        <label class="btn btn-escolha w-100" for="option14">
                                             <i class="fa-solid fa-users font-30"></i>
                                             <br>
                                             Quantidade<br>de Vendedores

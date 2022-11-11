@@ -4,6 +4,11 @@ body {background-color: #F4F4F4;}
 .bg-primary {background-color: #121F49 !important;}
 .bg-secondary {background-color: #EF780D;}
 .bg-light {background-color: #fff !important;}
+
+.bg-second-blue{
+    background-color: #304FB2 !important;
+}
+
 .color-primary {color: #121F49;}
 .color-secondary {color: #EF780D;}
 .color-tertiary {color: #9FA2B4;}
@@ -38,6 +43,10 @@ body {background-color: #F4F4F4;}
     border-radius: 8px;
     padding: 15px;
     border: 1px solid #C9C9C9;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .btn {
     border-radius: 6px;
@@ -73,7 +82,7 @@ body {background-color: #F4F4F4;}
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    padding: 15px;
+    padding: 30px 15px;
 }
 .btn-check:checked+.btn-escolha {
     color: #fff;
@@ -288,3 +297,54 @@ input[type=range]::-ms-tooltip {
 }
 
 .resultado {border: none;}
+
+.progress-bar{
+    background-color: #121F49;
+}
+.progress-bar-second-blue{
+    background-color: #304FB2;
+}
+
+
+
+.nav_relatorios a.nav-link{
+    color: #121F49;
+}
+.nav_relatorios a.active{
+    color: #304FB2;
+}
+
+.overflow-scroll {
+    overflow: hidden !important;
+}
+
+@media (max-width: 600px){
+    .main {
+        margin-bottom: 200px;
+    }
+    .acoes {
+        padding: 20px 13px;
+        background-color: #fff;
+        bottom: 90px;
+        border-top: 1px solid #ccc;
+    }
+    .card-responsaveis {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .card-responsaveis form {
+        margin-top: 15px;
+        width: 100% !important;
+    }
+
+    .etapas_topo #pills-tab{
+        width: 650px;
+    }
+    .overflow-scroll {
+        overflow: scroll !important;
+    }
+    .text-truncate {
+        width: 250px;
+    }
+}
+
