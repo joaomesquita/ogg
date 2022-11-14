@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OGG IND - Simulador Estratégico Industrial</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Mapa - Região de Instalação</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <img src="img/regioes.svg" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="font-20 fw-bold">Região 00</h2>
+                        <p class="font-16 mb-0">População: 00.000.000</p>
+                        <p class="font-16 mb-0">Cidades: 000</p>
+                        <p class="font-16 mb-0">Indústrias: 0000x</p>
+                        <p class="font-16">Comércios: 00.000</p>
+
+                        <p class="font-16 fw-bold mb-0">Demanda Prevista</p>
+                        <p class="font-16">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p class="font-16 fw-bold mb-0">Custo Logístico</p>
+                        <p class="font-16">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p class="font-16 fw-bold mb-0">Informações Quantidativas</p>
+                        <p class="font-16">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+                <button type="button" class="btn btn-primary">Selecionar</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-sm navbar-light">
+          <div class="container">
+            <a class="color-light text-decoration-none font-18 fw-bold text-truncate" href="painel-inicial.html">
+                <img class="me-2" src="img/arrow_left.svg" alt="">
+                Decisão Inicial - Abertura de Empresa
+            </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" d="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Alexandre Maciel | RH01</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Perfil</a></li>
+                            <li><a class="dropdown-item" href="painel-inicial.html">Sair</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+      </div>
+    </nav>
+
+    <div class="etapas_topo overflow-scroll py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="nav nav-pills nav-justified py-3" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pills-cenario-tab" data-bs-toggle="pill" data-bs-target="#pills-cenario" type="button" role="tab" aria-controls="pills-cenario" aria-selected="true">
+                                1
+                            </button>
+                            <p class="mb-0 fw-bold pt-2">Cenário</p>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-dados-gerais-tab" data-bs-toggle="pill" data-bs-target="#pills-dados-gerais" type="button" role="tab" aria-controls="pills-dados-gerais" aria-selected="false">2</button>
+                            <p class="mb-0 fw-bold pt-2">Dados Gerais</p>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-estrategia-tab" data-bs-toggle="pill" data-bs-target="#pills-estrategia" type="button" role="tab" aria-controls="pills-estrategia" aria-selected="false">3</button>
+                            <p class="mb-0 fw-bold pt-2">Estratégia</p>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-atuacao-tab" data-bs-toggle="pill" data-bs-target="#pills-atuacao" type="button" role="tab" aria-controls="pills-atuacao" aria-selected="false">4</button>
+                            <p class="mb-0 fw-bold pt-2">Atuação</p>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-responsaveis-tab" data-bs-toggle="pill" data-bs-target="#pills-responsaveis" type="button" role="tab" aria-controls="pills-responsaveis" aria-selected="false">5</button>
+                            <p class="mb-0 fw-bold pt-2">Responsáveis</p>
+                        </li>
+                        
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-swot-tab" data-bs-toggle="pill" data-bs-target="#pills-swot" type="button" role="tab" aria-controls="pills-swot" aria-selected="false">6</button>
+                            <p class="mb-0 fw-bold pt-2">SWOT</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-cenario" role="tabpanel" aria-labelledby="pills-cenario-tab">
+                            <div class="row text-center justify-content-center">
+                                <div class="col-lg-8">
+                                    <h1 class="font-30 mb-5 color-primary fw-bold">Cenário Geral de Atuação</h1>
+                                </div>
+                            </div>
+                            <div class="row row-cols-1 row-cols-md-2 g-4">
+                                <div class="col">
+                                    <h2 class="font-18 fw-bold mb-2">Produto Fabricado</h2>
+                                    <div class="card-cenario">
+                                        <p class="font-16 mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h2 class="font-18 fw-bold mb-2">Produto Fabricado</h2>
+                                    <div class="card-cenario">
+                                        <p class="font-16 mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h2 class="font-18 fw-bold mb-2">Produto Fabricado</h2>
+                                    <div class="card-cenario">
+                                        <p class="font-16 mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h2 class="font-18 fw-bold mb-2">Produto Fabricado</h2>
+                                    <div class="card-cenario">
+                                        <p class="font-16 mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-dados-gerais" role="tabpanel" aria-labelledby="pills-dados-gerais-tab">
+                            <div class="row text-center justify-content-center">
+                                <div class="col-lg-8">
+                                    <h1 class="font-30 color-primary fw-bold">Informe a identificação e contato da sua empresa</h1>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center mt-5">
+                                <div class="col-lg-4">
+                                    <div class="imagem text-center mb-4">
+                                        <img src="https://via.placeholder.com/120x120" class="img-thumbnail rounded-circle" alt="...">
+                                    </div>
+                                    <form action="">
+                                        <div class="mb-3">
+                                            <label for="nome-fantasia" class="form-label">Nome Fantasia/Equipe <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="nome-fantasia" placeholder="Informe o nome fantasia ou da equipe">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-estrategia" role="tabpanel" aria-labelledby="pills-estrategia-tab">
+                            <div class="row text-center justify-content-center">
+                                <div class="col-lg-8">
+                                    <h1 class="font-30 color-primary fw-bold">Escolha a estratégia a ser seguida <a href="#"><img src="img/icon_tooltip.svg" alt=""></a></h1>
+                                </div>
+                            </div>
+                            <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+                                <div class="col">
+                                    <input type="radio" class="btn-check" checked name="options" id="option1" autocomplete="off">
+                                    <label class="btn btn-escolha w-100" for="option1"><i class="bi bi-graph-up-arrow"></i> Liderança em Custos</label>
+                                </div>
+                                <div class="col">
+                                    <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                                    <label class="btn btn-escolha w-100" for="option2"><i class="bi bi-lightbulb"></i> Liderança em Diferenciação</label>
+                                </div>
+                                <div class="col">
+                                    <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                                    <label class="btn btn-escolha w-100" for="option3"><i class="bi bi-eye"></i> Liderança em Foco</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-atuacao" role="tabpanel" aria-labelledby="pills-atuacao-tab">
+                            <div class="row text-center justify-content-center">
+                                <div class="col-lg-8">
+                                    <h1 class="font-30 color-primary fw-bold">
+                                        Regiões de Atuação
+                                    </h1>
+                                </div>
+                            </div>
+                            <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+                                <div class="col">
+                                    <button type="button" class="btn btn-escolha w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <div class="card border-0">
+                                            <span>
+                                                <i class="bi bi-gear-fill"></i> Região de Instalação
+                                            </span>
+                                            <div class="position-relative">
+                                                <div class="position-absolute top-50 start-50 translate-middle">
+                                                    <p class="font-30 fw-bold color-light">1</p>
+                                                </div>
+                                                <img src="img/regiao-selecionada.svg" alt="" class="img-fluid mt-4">
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-escolha w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <div class="card border-0">
+                                            <span>
+                                                <i class="bi bi-graph-up-arrow"></i> Região de Liderança
+                                            </span>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-escolha w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <div class="card border-0">     
+                                            <span>
+                                                <i class="bi bi-lightning-charge"></i> Região de Forte Atuação
+                                            </span>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-responsaveis" role="tabpanel" aria-labelledby="pills-responsaveis-tab">
+                            <div class="row text-center justify-content-center">
+                                <div class="col-lg-10">
+                                    <h1 class="font-30 color-primary fw-bold">Equipe e Cargos</h1>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center mt-5">
+                                <div class="col-lg-10">
+                                    <div class="card-responsaveis">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="img/gerente-geral.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-3">
+                                                <p class="font-16 fw-bold mb-0">Gerente Geral</p>
+                                            </div>
+                                        </div>
+                                        <form action="" class="w-75">
+                                            <div class="row">
+                                                <div class="col-12 col-lg-6">
+                                                    <input type="text" class="form-control mb-2 mb-lg-0" id="exampleFormControlInput1" placeholder="Informe o nome">
+                                                </div>
+                                                <div class="col-12 col-lg-6">
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Informe o e-mail">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-responsaveis">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="img/producao.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-3">
+                                                <p class="font-16 fw-bold mb-0">Produção</p>
+                                            </div>
+                                        </div>
+                                        <form action="" class="w-75">
+                                            <div class="row">
+                                                <div class="col-12 col-lg-6">
+                                                    <input type="text" class="form-control mb-2 mb-lg-0" id="exampleFormControlInput1" placeholder="Informe o nome">
+                                                </div>
+                                                <div class="col-12 col-lg-6">
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Informe o e-mail">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-responsaveis">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="img/marketing.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-3">
+                                                <p class="font-16 fw-bold mb-0">Marketing</p>
+                                            </div>
+                                        </div>
+                                        <form action="" class="w-75">
+                                            <div class="row">
+                                                <div class="col-12 col-lg-6">
+                                                    <input type="text" class="form-control mb-2 mb-lg-0" id="exampleFormControlInput1" placeholder="Informe o nome">
+                                                </div>
+                                                <div class="col-12 col-lg-6">
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Informe o e-mail">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-responsaveis">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="img/gestao-pessoas.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-3">
+                                                <p class="font-16 fw-bold mb-0">Gestão de Pessoas</p>
+                                            </div>
+                                        </div>
+                                        <form action="" class="w-75">
+                                            <div class="row">
+                                                <div class="col-12 col-lg-6">
+                                                    <input type="text" class="form-control mb-2 mb-lg-0" id="exampleFormControlInput1" placeholder="Informe o nome">
+                                                </div>
+                                                <div class="col-12 col-lg-6">
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Informe o e-mail">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-responsaveis">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="img/financeiro.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-3">
+                                                <p class="font-16 fw-bold mb-0">Financeiro</p>
+                                            </div>
+                                        </div>
+                                        <form action="" class="w-75">
+                                            <div class="row">
+                                                <div class="col-12 col-lg-6">
+                                                    <input type="text" class="form-control mb-2 mb-lg-0" id="exampleFormControlInput1" placeholder="Informe o nome">
+                                                </div>
+                                                <div class="col-12 col-lg-6">
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Informe o e-mail">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-swot" role="tabpanel" aria-labelledby="pills-swot-tab">
+                            <div class="row text-center justify-content-center">
+                                <div class="col-lg-8">
+                                    <h1 class="font-30 color-primary fw-bold">Missão, Visão e SWOT</h1>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center mt-4">
+                                <div class="col-lg-8">
+                                    <form action="">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="mb-4">
+                                                    <label for="exampleFormControlTextarea1" class="form-label">Missão</label>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Descreva a missão da empresa" rows="4"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="mb-4">
+                                                    <label for="exampleFormControlTextarea1" class="form-label">Visão</label>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Descreva a visão da empresa" rows="4"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-lg-8 mb-5">
+                                    <p class="font-16">SWOT</p>
+                                    <div class="d-flex flex-row align-items-center mb-3">
+                                        <img src="img/forca.svg" alt="" class="img-fluid">
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Descreva aqui as forças" rows="3"></textarea>
+                                    </div>
+                                    <div class="d-flex flex-row align-items-center mb-3">
+                                        <img src="img/fraqueza.svg" alt="" class="img-fluid">
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Descreva aqui as fraquezas" rows="3"></textarea>
+                                    </div>
+                                    <div class="d-flex flex-row align-items-center mb-3">
+                                        <img src="img/oportunidade.svg" alt="" class="img-fluid">
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Descreva aqui as oportunidades" rows="3"></textarea>
+                                    </div>
+                                    <div class="d-flex flex-row align-items-center">
+                                        <img src="img/ameaca.svg" alt="" class="img-fluid">
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Descreva aqui as ameaças" rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="acoes">
+                        <div class="botoes">
+                            <a href="painel-aluno.html" class="btn btn-voltar">Cancelar</a>
+                            <!-- <a href="painel-aluno.html" class="btn btn-primary disabled">Próximo <i class="bi bi-arrow-right"></i></a> -->
+                            <a href="painel-geral.html" class="btn btn-primary">Finalizar <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer fixed-bottom">
+        <div class="container-fluid">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="col-12 col-lg-6">
+                    <div class="d-flex flex-column flex-lg-row align-items-center">
+                        <div class="flex-shrink-0">
+                            <img src="img/logo-rodape.svg" alt="" class="img-fluid">
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <p class="font-14 mb-0">2018050-MANAGEMENT / RU01-01</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <p class="font-14 text-center text-lg-end mb-0">Direitos reservados a OGG Simulador © 2022 </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
